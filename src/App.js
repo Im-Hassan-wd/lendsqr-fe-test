@@ -1,4 +1,6 @@
 import { Routes, Route } from "react-router-dom"
+// static files
+import "./App.scss";
 // pages
 import Dashboard from "./pages/dashboard/Dashboard";
 import Login from "./pages/login/Login";
