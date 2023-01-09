@@ -1,30 +1,36 @@
 // static files
 import loginImg from '../../img/login.svg'
+import logo from '../../img/logo.svg'
+
+
 const Login = () => {
   return (
     <div className="login">
       <div className="logo">
-        <img src="" alt="logo" />
-      </div>
-      <div className="login-img">
-        <img src={loginImg} alt="login" />
+        <img src={logo} alt="logo" />
       </div>
 
-      <form>
-        <h1>Welcome</h1>
-        <p>Enter details to login</p>
-        
-        <label>
-          <input type="text" placeholder="name" />
-        </label>
+      <div className='login-content'>
+        <div className="login-img">
+          <img src={loginImg} alt="login" />
+        </div>
 
-        <label>
-          <input type="password" placeholder="pasword" />
-          <span>Show</span>
-        </label>
+        <form>
+          <h1>Welcome!</h1>
+          <p>Enter details to login</p>
+          
+          <label>
+            <input type="text" placeholder="name" />
+          </label>
 
-        <button></button>
-      </form>
+          <label>
+            <input type="password" placeholder="pasword" />
+            <span>Show</span>
+          </label>
+
+          <button></button>
+        </form>
+      </div>
     </div>
   );
 }
