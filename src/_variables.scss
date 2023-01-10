@@ -4,7 +4,12 @@ $blue: #39CDCC;
 $gray: #545F7D;
 
 // color palette
-// 
+$colors: (
+  "primary": $primary,
+  "blue": $blue,
+  "gray": $gray
+);
+
 // spacing
 $base-padding: 16px;
 $base-margin: 16px;
