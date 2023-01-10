@@ -12,18 +12,21 @@
       width: 95%;
     }
   }
-  .login-img-container {
-    background: #f5f5f5;
-  }
   h1 {
     color: $primary;
     margin-bottom: $base-margin / 2;
+    font-size: $font-size-lg;
 
   }
   p {
     color: $gray;
     margin-top: 0;
     margin-bottom: $base-margin * 2;
+    font-size: $base-font-size;
+  }
+
+  form {
+    margin-left: 128px;
   }
 
   label {
@@ -45,7 +48,7 @@
       position: absolute;
       top: 40%;
       right: 0px;
-      font-size: $base-font-size - 8;
+      font-size: $font-size-xs;
       text-transform: uppercase;
       color: $blue;
       cursor: pointer;
