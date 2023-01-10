@@ -1,12 +1,13 @@
 // variable & functions
-@import "variables";
+@import "./scss/variables";
 
 // base & layout
-@import "base";
+@import "./scss/base";
 
 // colors
-@import "colors";
+@import "./scss/colors";
 
 // components (button, card, navbar)
+@import "./scss/components/button";
 
 // utilities (margin, padding, opacity)

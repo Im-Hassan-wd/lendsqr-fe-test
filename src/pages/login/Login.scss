@@ -1,4 +1,4 @@
-@import '../../variables';
+@import "../../scss/variables";
 
 .login {
   margin: $base-margin * 4 0;
@@ -26,7 +26,7 @@
   }
 
   form {
-    margin-left: 128px;
+    margin-left: auto;
   }
 
   label {
