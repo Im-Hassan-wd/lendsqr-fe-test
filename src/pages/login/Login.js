@@ -20,17 +20,17 @@ const Login = () => {
           <p>Enter details to login</p>
           
           <label>
-            <input type="text" placeholder="name" />
+            <input className='font-sm' type="text" placeholder="name" />
           </label>
 
           <label className="form-label">
             <div className="input-div">
-              <input className="form-input" type="password" placeholder="password" />
+              <input className="form-input font-sm" type="password" placeholder="password" />
               <span>Show</span>
             </div>
           </label>
 
-          <button className='login-button'>Login</button>
+          <button className='login-button'>Log in</button>
         </form>
       </div>
     </div>

@@ -48,8 +48,19 @@
     width: 298px;
     margin: $base-margin 0;
     height: 32px;
-    border: $base-border-thickness soild black;
+    border: 2px solid rgba(84, 95, 125, 0.15);
     padding: 0 $base-padding / 2;
+    border-radius: $base-border-radius - 2;
+  }
+  
+  button {
+    background: $blue;
+    border-radius: $base-border-radius;
+    border: $base-border-thickness solid $blue;
+    text-transform: uppercase;
+    color: #fff;
+    cursor: pointer;
+    width: 100%;
   }
 
   .input-div {
