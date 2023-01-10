@@ -7,14 +7,3 @@
   padding: 0 $base-padding * 2;
 }
 
-.login {
-  margin: $base-margin * 4 0;
-  .logo {
-    margin-bottom: $base-margin * 5;
-  }
-  .login-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-}

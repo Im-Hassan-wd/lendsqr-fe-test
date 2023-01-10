@@ -10,8 +10,8 @@ const Login = () => {
         <img src={logo} alt="logo" />
       </div>
 
-      <div className='login-content'>
-        <div className="login-img">
+      <div className='login-container'>
+        <div className="login-img-container">
           <img src={loginImg} alt="login" />
         </div>
 
@@ -23,12 +23,12 @@ const Login = () => {
             <input type="text" placeholder="name" />
           </label>
 
-          <label>
-            <input type="password" placeholder="pasword" />
+          <label className="form-label">
+            <input className="form-input" type="password" placeholder="password" />
             <span>Show</span>
           </label>
 
-          <button></button>
+          <button className='login-button'>Login</button>
         </form>
       </div>
     </div>

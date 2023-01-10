@@ -1,0 +1,52 @@
+@import '../../variables';
+
+.login {
+  margin: $base-margin * 4 0;
+  .logo {
+    margin-bottom: $base-margin * 5;
+  }
+  .login-container {
+    display: flex;
+    align-items: center;
+    .login-img img{
+      width: 95%;
+    }
+  }
+  .login-img-container {
+    background: #f5f5f5;
+  }
+  h1 {
+    color: $primary;
+    margin-bottom: $base-margin / 2;
+
+  }
+  p {
+    color: $secondary;
+    margin-top: 0;
+    margin-bottom: $base-margin * 2;
+  }
+
+  label {
+    display: block;
+  }
+
+  input, button {
+    width: 298px;
+    margin: $base-margin 0;
+    height: 32px;
+    border: $base-border-thickness soild black;
+    padding: 0 $base-padding / 2;
+  }
+
+  .form-label {
+    position: relative;
+    span {
+      position: absolute;
+      top: 40%;
+      right: 21px;
+      font-size: $base-font-size - 8;
+      text-transform: uppercase;
+      color: $blue;
+    }
+  }
+}
