@@ -8,8 +8,13 @@
   .login-container {
     display: flex;
     align-items: center;
-    .login-img img{
+    .login-img-container img{
       width: 100%;
+    }
+  }
+  @media (max-width: 800px) {
+    .login-container {
+      flex-direction: column;
     }
   }
   h1 {
@@ -26,7 +31,13 @@
   }
 
   form {
-    // margin-left: auto;
+    margin-left: 64px;
+  }
+
+  @media (max-width: 800px) {
+    form {
+      margin-left: 0px;
+    }
   }
 
   label {
