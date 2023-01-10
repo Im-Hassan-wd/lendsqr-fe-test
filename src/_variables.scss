@@ -4,7 +4,7 @@ $blue: #39CDCC;
 $gray: #545F7D;
 
 // color palette
-// 2
+// 
 // spacing
 $base-padding: 16px;
 $base-margin: 16px;
@@ -13,5 +13,12 @@ $base-margin: 16px;
 $base-border-thickness: 2px;
 $base-border-radius: 8px;
 
+// box shadow
+$base-box-shadow: 3px 0px 20px rgba(0, 0, 0, 0.04);
+
 // font-sizes
 $base-font-size: 20px;
+$font-size-xm: $base-font-size - 8;
+$font-size-sm: $base-font-size - 6;
+$font-size-md: $base-font-size + 4;
+$font-size-lg: $base-font-size * 2;

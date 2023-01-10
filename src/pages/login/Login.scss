@@ -21,7 +21,7 @@
 
   }
   p {
-    color: $secondary;
+    color: $gray;
     margin-top: 0;
     margin-bottom: $base-margin * 2;
   }
@@ -38,15 +38,17 @@
     padding: 0 $base-padding / 2;
   }
 
-  .form-label {
+  .input-div {
     position: relative;
+    width: 298px;
     span {
       position: absolute;
       top: 40%;
-      right: 21px;
+      right: 0px;
       font-size: $base-font-size - 8;
       text-transform: uppercase;
       color: $blue;
+      cursor: pointer;
     }
   }
 }

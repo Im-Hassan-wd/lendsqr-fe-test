@@ -1,7 +1,7 @@
 // static files
 import loginImg from '../../img/login.svg'
 import logo from '../../img/logo.svg'
-
+import "./Login.scss"
 
 const Login = () => {
   return (
@@ -24,8 +24,10 @@ const Login = () => {
           </label>
 
           <label className="form-label">
-            <input className="form-input" type="password" placeholder="password" />
-            <span>Show</span>
+            <div className="input-div">
+              <input className="form-input" type="password" placeholder="password" />
+              <span>Show</span>
+            </div>
           </label>
 
           <button className='login-button'>Login</button>
