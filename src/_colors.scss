@@ -5,4 +5,24 @@
   .bg-#{$key} {
     background-color: $val;
   }
+
+  // light varaitions
+  @for $i from 1 through 5 {
+    .text-#{$key}-light-#{$i}{
+      color: mix(white, $val, $i * 10);
+    }
+    .bg-#{$key}-light-#{$i}{
+      background-color: mix(white, $val, $i * 10);
+    }
+  }
+
+  // light varaitions
+  @for $i from 1 through 5 {
+    .text-#{$key}-dark-#{$i}{
+      color: mix(black, $val, $i * 10);
+    }
+    .bg-#{$key}-dark-#{$i}{
+      background-color: mix(black, $val, $i * 10);
+    }
+  }
 }
