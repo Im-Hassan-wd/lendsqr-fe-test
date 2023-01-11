@@ -25,7 +25,7 @@ import sliders from "../icon/sliders.svg"
 
 const Sidebar = () => {
     return (
-      <div className="sidebar">
+      <div className="sidebar bg-white">
         <h5 className="pl-2">
           <a className="display-f align-center" href="#">
             <img className="mr-1" src={briefcase} alt="briefcase icon" />
@@ -39,7 +39,7 @@ const Sidebar = () => {
             <div className="font-sm text-gray-light-3">Dashboard</div>
           </a>
         </h5>
-        <p className="font-sm text-gray pl-2">Customers</p>
+        <p className="font-sm text-gray mt-2 pl-2">Customers</p>
         <ul className="mb-2">
           <SideList img={users} text="Users" />
           <SideList img={gua} text="Guarantors" />
