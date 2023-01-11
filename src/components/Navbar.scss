@@ -1,0 +1,18 @@
+.navbar {
+  .logo {
+    width: 100px;
+  }
+  .logo img {
+    width: 100%;
+  }
+}
+
+.border-half-radius {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.form-input-half {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}

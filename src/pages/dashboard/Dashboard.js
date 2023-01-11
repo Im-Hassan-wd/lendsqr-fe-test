@@ -1,7 +1,9 @@
+import Navbar from "../../components/Navbar";
+
 const Dashboard = () => {
     return (
       <div className="dashboard">
-        dashboard
+        <Navbar />
       </div>
     );
 }

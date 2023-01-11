@@ -1,0 +1,19 @@
+@mixin form-input($bg-color: #e2e2e2) {
+    border: 1px solid $bg-color;
+    height: 32px;
+    padding: 0 $base-padding / 2;
+    border-radius: $base-border-radius;
+}
+
+.form-input {
+  @include form-input;
+}
+
+@each $key, $val in $colors {
+  .form-input-#{$key} {
+    @include form-input($val);
+    &:hover {
+      border: $base-border-thickness solid lighten($val, 5);
+    }
+  }
+}
