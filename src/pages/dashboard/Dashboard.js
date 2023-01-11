@@ -7,7 +7,6 @@ const Dashboard = () => {
     return (
       <div className="dashboard bg-light">
         <Navbar />
-        <div className="responsive-text">Changing colors</div>
         <div className="display-f">
           <Sidebar />
           <div className="container">

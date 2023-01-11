@@ -1,8 +1,9 @@
 .card {
   display: block;
-  padding: $base-padding;
+  padding: $base-padding * 2;
   box-shadow: $box-shadow-lg;
   background: $white;
+  width: 150px;
 
   .card-img {
     width: 100%;
