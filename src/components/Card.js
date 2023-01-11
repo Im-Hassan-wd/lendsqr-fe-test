@@ -1,6 +1,6 @@
 const Card = () => {
     return (
-      <div className="row">
+      <div className="row gap-2">
         <div className="col-12-xs col-5-sm col-3-xl">
           <div className="card">
             <div className="card-img"></div>
