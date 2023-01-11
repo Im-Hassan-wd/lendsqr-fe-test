@@ -5,4 +5,5 @@ $transform-values: uppercase, lowercase, capitalize;
   transform-#{$val} {
     text-transform: $val;
   }
+  @debug $val
 }

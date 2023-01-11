@@ -3,14 +3,34 @@ import filter from "../icon/filter.svg"
 
 const UserList = () => {
   return (
-    <div className="user-list">
-      <ul className="display-f align-center">
-        <li className="display-f align-center">
-          <div className="text-gray font-xs">Organization</div>
+    <table border="1" className="user-list">
+      <th>
+        <td>
+          <div className="text-gray transform-uppercase font-xs display-i">Organization</div>
           <img className="ml-1" src={filter} alt="filter" />
-        </li>
-      </ul>
-    </div>
+        </td>
+        <td className="">
+          <div className="text-gray transform-uppercase font-xs display-i">Username</div>
+          <img className="ml-1" src={filter} alt="filter" />
+        </td>
+        <td className="">
+          <div className="text-gray transform-uppercase font-xs display-i">Email</div>
+          <img className="ml-1" src={filter} alt="filter" />
+        </td>
+        <td className="">
+          <div className="text-gray transform-uppercase font-xs display-i">Phone Number</div>
+          <img className="ml-1" src={filter} alt="filter" />
+        </td>
+        <td className="">
+          <div className="text-gray transform-uppercase font-xs display-i">Date Joined</div>
+          <img className="ml-1" src={filter} alt="filter" />
+        </td>
+        <td className="">
+          <div className="text-gray transform-uppercase font-xs display-i">Status</div>
+          <img className="ml-1" src={filter} alt="filter" />
+        </td>
+      </th>
+    </table>
   );
 }
  
