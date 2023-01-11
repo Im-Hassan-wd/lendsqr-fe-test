@@ -1,9 +1,12 @@
 .navbar {
-  .logo {
+  .logo img {
     width: 100px;
   }
-  .logo img {
-    width: 100%;
+  .avatar {
+    width: 40px;
+  }
+  li img, li p {
+    cursor: pointer;
   }
 }
 

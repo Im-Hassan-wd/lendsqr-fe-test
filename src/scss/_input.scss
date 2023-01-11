@@ -1,8 +1,15 @@
 @mixin form-input($bg-color: #e2e2e2) {
-    border: 1px solid $bg-color;
-    height: 32px;
-    padding: 0 $base-padding / 2;
-    border-radius: $base-border-radius;
+  border: 1px solid $bg-color;
+  height: 32px;
+  padding: 0 $base-padding / 2;
+  border-radius: $base-border-radius;
+  font-size: $font-size-sm;
+  font-family: 'Work Sans', sans-serif;
+  width: 268px
+}
+
+.form-input::placeholder { 
+  color: $gray;
 }
 
 .form-input {
