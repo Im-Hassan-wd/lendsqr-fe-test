@@ -24,6 +24,11 @@ li {
   list-style: none;
 }
 
-.sidebar {
-  padding: 0 $base-padding;
+.sidebar li {
+  border-left: 2px solid #fff;
+}
+
+#root > div > div > div > div > ul:nth-child(4) > li.pl-2.li-active.mb-1.pb-1 {
+  border-left: 3px solid $blue;
+  background-color: #78acb1;
 }
