@@ -1,0 +1,8 @@
+$transform-values: uppercase, lowercase, capitalize;
+
+// transform values
+@each $val in $transform-values {
+  transform-#{$val} {
+    text-transform: $val;
+  }
+}
