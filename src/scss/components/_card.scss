@@ -1,0 +1,18 @@
+.card {
+  display: block;
+  padding: $base-padding;
+  box-shadow: $box-shadow-lg;
+
+  .card-img {
+    width: 100%;
+  }
+  .card-body {
+    font-size: $font-size-sm;
+    color: $gray;
+    text-transform: uppercase;
+  }
+  .card-h {
+    font-weight: bold;
+    font-size: $font-size-lg - 6;
+  }
+}

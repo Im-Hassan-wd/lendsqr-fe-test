@@ -8,6 +8,9 @@
   li img, li p {
     cursor: pointer;
   }
+  a {
+    text-decoration: underline;
+  }
 }
 
 button.border-half-radius {
