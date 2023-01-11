@@ -36,3 +36,10 @@ li {
   border-left: 3px solid $blue;
   background-color: #9ce6e6;
 }
+
+@media (max-width: 645px) {
+  .sidebar {
+    width: 50px;
+    overflow: hidden;
+  }
+}

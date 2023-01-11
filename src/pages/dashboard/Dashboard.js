@@ -2,6 +2,7 @@
 import Navbar from "../../components/Navbar";
 import Sidebar from "../../components/Sidebar";
 import Card from "../../components/Card";
+import UserList from "../../components/UserList";
 
 const Dashboard = () => {
     return (
@@ -10,8 +11,9 @@ const Dashboard = () => {
         <div className="display-f">
           <Sidebar />
           <div className="container">
-            <h1 className="font-lg mt-3 mb-3 text-primary">Users</h1>
+            <h1 className="font-lg mt-2 mb-2 text-primary">Users</h1>
             <Card />
+            <UserList />
           </div>
         </div>
       </div>

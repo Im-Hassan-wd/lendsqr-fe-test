@@ -6,15 +6,22 @@
   width: 150px;
 
   .card-img {
-    width: 100%;
+    width: 40px;
+    margin-bottom: 8px;
+    img {
+      width: 100%;
+    }
   }
   .card-body {
     font-size: $font-size-sm;
     color: $gray;
     text-transform: uppercase;
+    margin-bottom: 8px;
+    font-size: 14px;
   }
   .card-h {
     font-weight: bold;
     font-size: $font-size-lg - 6;
+    color: $primary;
   }
 }
