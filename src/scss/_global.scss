@@ -44,6 +44,17 @@ li {
   }
 }
 
+
+
 table {
-  width: 100%;
+  overflow-x: scroll;
+  width: 985px;
+}
+
+.align-left, th {
+  text-align: left;
+}
+
+tr {
+  border-bottom: 2px solid black;
 }
