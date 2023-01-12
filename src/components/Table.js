@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 const Table = ({ user }) => {
   return (
     <table className="user-list">
-      {user && (<tr>
+      {user && <tr>
         <th>
           <div className="text-gray transform-uppercase font-xs display-i">Organization</div>
           
@@ -30,8 +30,7 @@ const Table = ({ user }) => {
           <div className="text-gray transform-uppercase font-xs display-i">Status</div>
           
         </th>
-        </tr>)}
-
+      </tr>}
 
         {user && user.map(u => (
             <tr key={u.id}>

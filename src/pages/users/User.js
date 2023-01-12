@@ -5,6 +5,8 @@ import Card from "../../components/Card";
 import Navbar from "../../components/Navbar";
 import Sidebar from "../../components/Sidebar";
 import Table from "../../components/Table";
+import Pagination from "../../components/Pagination";
+import Filter from "../../components/Filter";
 
 const User = ({ user, isPending }) => {
     return (
@@ -16,7 +18,9 @@ const User = ({ user, isPending }) => {
             <h1 className="font-lg mt-2 mb-2 text-primary">Users</h1>
             <Card />
             {isPending && <div className="loading"><img src={loading} alt="loading" /></div>}
-            <Table user={user} isPending={isPending} />
+            <Table user={user.slice(0, 10)} isPending={isPending} />
+            <Filter />
+            <Pagination />
           </div>
         </div>
       </div>

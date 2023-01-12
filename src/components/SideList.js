@@ -1,10 +1,12 @@
-const SideList = ({img, text}) => {
+import { Link } from "react-router-dom";
+
+const SideList = ({img, text, link}) => {
     return (
       <li className="p-2">
-        <a className="display-f align-center" href="#">
+        <Link className="display-f align-center" to={link}>
           <img className="mr-1" src={img} alt="" />
           <div className="font-sm text-gray">{text}</div>
-        </a>
+        </Link>
       </li>
     );
 }

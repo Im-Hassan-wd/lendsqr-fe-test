@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Routes, Route } from "react-router-dom"
+import { Routes, Route, Navigate } from "react-router-dom"
 // pages
 import Dashboard from "./pages/dashboard/Dashboard";
 import Login from "./pages/login/Login";
@@ -11,6 +11,8 @@ function App() {
   const [user, setUser] = useState(null);
   const [isPending, setIsPending] = useState(true)
   const [error, setError] = useState(null)
+  const [start, setStart] = useState(0)
+  const [end, setEnd] = useState(10)
 
   useEffect(() => {
     fetchData()
@@ -25,22 +27,18 @@ function App() {
       setUser(data);
     }
     catch(err) {
-      console.log(err);
+      setError("Something went wrong but don't fret,");
+      setIsPending(true)
     }
   }
   return (
     <div className="App">
       <Routes>
-        <Route index element={<Login />} />
+        <Route index element={<Dashboard />} />
+        <Route path="dashboard" element={<Dashboard user={user} isPending={isPending} error={error} />} />
         <Route path="login" element={<Login />} />
-        <Route path="dashboard" element={<Dashboard user={user} isPending={isPending} />} />
-        <Route path="user" element={<User user={user} isPending={isPending} />} />
-
-        <Route>
-          <Route index element={<User />} />
-          <Route path='user' element={<User />} />
-          <Route path='/user/:id' element={<UserDetails />} />
-        </Route>
+        <Route path="user" element={<User user={user} isPending={isPending} error={error}/>} />
+        <Route path='/user/:id' element={<UserDetails />} />
       </Routes>
     </div>
   );

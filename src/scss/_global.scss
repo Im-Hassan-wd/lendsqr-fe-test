@@ -10,8 +10,6 @@ body {
   box-sizing: border-box;
   font-family: 'Work Sans', sans-serif;
   background: $light;
-  width: 100%;
-  overflow-x: scroll;
 }
   
 a {
@@ -40,7 +38,7 @@ li {
   background-color: #9ce6e6;
 }
 
-@media (max-width: 645px) {
+@media (max-width: 800px) {
   .sidebar {
     width: 50px;
     overflow: hidden;
@@ -54,6 +52,9 @@ table {
   box-shadow: $box-shadow-lg;
   display: inline-block;
   padding: $base-padding * 2;
+  th, td {
+    margin-right: $base-margin;
+  }
   tr {
     border-bottom: 1px solid rgba(33, 63, 125, 0.1);
   }
