@@ -3,7 +3,7 @@ import "./Filter.scss"
 
 const Filter = () => {
     return (
-      <div className="filter bg-white p-2">
+      <div className="filter bg-white p-2 br-md">
         <form>
           <div className="font-xs text-primary"></div>
           <label>

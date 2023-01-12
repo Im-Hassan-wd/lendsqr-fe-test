@@ -6,7 +6,8 @@
   }
   .filter {
     position: absolute;
-    top: 0;
-    box-sizing: $box-shadow-lg;
+    top: 50px;
+    left: 50px;
+    box-shadow: $box-shadow-lg;
   }
 }
