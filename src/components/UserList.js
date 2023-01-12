@@ -33,7 +33,7 @@ const UserList = ({ user, isPending}) => {
         </th>
       </tr>}
 
-      {isPending && <div className="align-center"><img src={loading} alt="loading" /></div>}
+      {isPending && <div className="loading"><img src={loading} alt="loading" /></div>}
 
         {user && user.map(u => (
         <tr key={u.id}>

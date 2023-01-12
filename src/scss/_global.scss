@@ -58,3 +58,13 @@ table {
 tr {
   border-bottom: 2px solid black;
 }
+
+.loading {
+  width: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  img {
+    width: 100%;
+  }
+}
