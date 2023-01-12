@@ -34,7 +34,7 @@ function App() {
       <Routes>
         <Route index element={<Login />} />
         <Route path="login" element={<Login />} />
-        <Route path="dashboard" element={<Dashboard user={user} />} />
+        <Route path="dashboard" element={<Dashboard user={user} isPending={isPending} />} />
         <Route path="user" element={<User />} />
 
         <Route>
