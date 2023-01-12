@@ -2,10 +2,9 @@ import { Link } from "react-router-dom";
 // static files
 // import filter from "../icon/filter.svg"
 
-const UserList = ({ user }) => {
+const Table = ({ user }) => {
   return (
-    <div className="table">
-        <table className="user-list">
+    <table className="user-list">
       {user && (<tr>
         <th>
           <div className="text-gray transform-uppercase font-xs display-i">Organization</div>
@@ -31,7 +30,7 @@ const UserList = ({ user }) => {
           <div className="text-gray transform-uppercase font-xs display-i">Status</div>
           
         </th>
-      </tr>)}
+        </tr>)}
 
 
         {user && user.map(u => (
@@ -57,8 +56,7 @@ const UserList = ({ user }) => {
         </tr>
         ))}
     </table>
-    </div>
   );
 }
  
-export default UserList;
+export default Table;
