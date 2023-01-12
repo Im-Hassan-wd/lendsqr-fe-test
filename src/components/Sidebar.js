@@ -20,6 +20,8 @@ import users from "../icon/users.svg"
 import whiteList from "../icon/white-l.svg"
 import home from "../icon/home.svg"
 import badge from "../icon/badge.svg"
+import { Link } from "react-router-dom"
+// static files (images, styles)
 import clipboard from "../icon/clipboard.svg"
 import sliders from "../icon/sliders.svg"
 
@@ -36,7 +38,7 @@ const Sidebar = () => {
         <h5 className="pl-2 mt-2">
           <a className="display-f align-center" href="#">
             <img className="mr-1"  src={home} alt="dashboard icon" />
-            <div className="font-sm text-gray-light-3">Dashboard</div>
+            <div className="font-sm text-gray-light-3"><Link to="/dashboard">Dashboard</Link></div>
           </a>
         </h5>
         <p className="font-sm text-gray mt-2 pl-2">Customers</p>

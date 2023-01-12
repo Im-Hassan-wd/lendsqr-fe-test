@@ -23,7 +23,6 @@ function App() {
       setIsPending(false)
 
       setUser(data);
-      console.log(data[0].education.loanRepayment)
     }
     catch(err) {
       console.log(err);
@@ -35,7 +34,7 @@ function App() {
         <Route index element={<Login />} />
         <Route path="login" element={<Login />} />
         <Route path="dashboard" element={<Dashboard user={user} isPending={isPending} />} />
-        <Route path="user" element={<User />} />
+        <Route path="user" element={<User user={user} isPending={isPending} />} />
 
         <Route>
           <Route index element={<User />} />
