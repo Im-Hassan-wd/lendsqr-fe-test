@@ -18,8 +18,10 @@ const User = ({ user, isPending }) => {
             <h1 className="font-lg mt-2 mb-2 text-primary">Users</h1>
             <Card />
             {isPending && <div className="loading"><img src={loading} alt="loading" /></div>}
-            <Table user={user.slice(0, 10)} isPending={isPending} />
-            <Filter />
+            <div className="container">
+              {user && <Table user={user.slice(0, 10)} isPending={isPending} />}
+              <Filter />
+            </div>
             <Pagination />
           </div>
         </div>

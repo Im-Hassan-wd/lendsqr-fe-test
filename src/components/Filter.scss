@@ -1,0 +1,12 @@
+@import "../scss/variables";
+
+.dashboard {
+  .container {
+    position: relative;
+  }
+  .filter {
+    position: absolute;
+    top: 0;
+    box-sizing: $box-shadow-lg;
+  }
+}
