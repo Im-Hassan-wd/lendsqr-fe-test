@@ -1,13 +1,13 @@
 @import "../scss/variables";
 
 .dashboard {
-  .container {
+  .wrapper {
     position: relative;
   }
   .filter {
     position: absolute;
     top: 50px;
-    left: 50px;
+    left: 10px;
     box-shadow: $box-shadow-lg;
   }
 }

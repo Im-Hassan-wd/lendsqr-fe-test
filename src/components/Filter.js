@@ -35,6 +35,8 @@ const Filter = () => {
               <option value="Pending">Pending</option>
             </select>
           </label>
+          <button className="btn-outlined-gray">Reset</button>
+          <button className="btn-blue text-white">Filter</button>
         </form>
       </div>
     );

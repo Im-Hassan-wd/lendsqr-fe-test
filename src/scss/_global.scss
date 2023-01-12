@@ -51,7 +51,7 @@ table {
   border-collapse: collapse;
   box-shadow: $box-shadow-lg;
   display: inline-block;
-  padding: $base-padding * 2;
+  padding: $base-padding * 2 $base-padding * 3;
   th, td {
     margin-right: $base-margin;
   }

@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 const Table = ({ user }) => {
   return (
-    <table className="user-list">
+    <table className="user-list bg-white">
       {user && <tr>
         <th>
           <div className="text-gray transform-uppercase font-xs display-i">Organization</div>
