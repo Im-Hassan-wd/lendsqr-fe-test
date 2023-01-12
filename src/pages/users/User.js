@@ -1,6 +1,14 @@
+import Navbar from "../../components/Navbar";
+import Sidebar from "../../components/Sidebar";
+
 const User = () => {
     return (
-      <div className="user">User</div>
+      <div className="user">
+        <Navbar />
+        <div className="display-f">
+          <Sidebar />
+        </div>
+      </div>
     );
 }
  

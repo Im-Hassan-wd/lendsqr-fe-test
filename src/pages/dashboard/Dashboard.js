@@ -11,7 +11,7 @@ const Dashboard = ({ user, isPending }) => {
         <div className="display-f">
           <Sidebar />
           <div className="container">
-            <h1 className="font-lg mt-2 mb-2 text-primary">Users</h1>
+            <h1 className="font-lg mt-2 mb-2 text-primary">Dashboard</h1>
             <Card />
             {isPending && <div className="loading"><img src={loading} alt="loading" /></div>}
             <Table user={user} isPending={isPending} />
