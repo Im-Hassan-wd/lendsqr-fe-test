@@ -8,7 +8,7 @@ import User from "./pages/users/User";
 
 function App() {
 
-  const [user, setUser] = useState([]);
+  const [user, setUser] = useState(null);
   const [isPending, setIsPending] = useState(true)
   const [error, setError] = useState(null)
 

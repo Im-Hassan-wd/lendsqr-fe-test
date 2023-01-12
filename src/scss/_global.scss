@@ -9,6 +9,9 @@ body {
   padding: 0;
   box-sizing: border-box;
   font-family: 'Work Sans', sans-serif;
+  background: $light;
+  width: 100%;
+  overflow-x: scroll;
 }
   
 a {
@@ -44,27 +47,29 @@ li {
   }
 }
 
-
-
 table {
-  overflow-x: scroll;
-  width: 985px;
+  overflow-x: hidden;
+  width: 980px;
+  border-collapse: collapse;
+  box-shadow: $box-shadow-lg;
+  tr {
+    border-bottom: 1px solid rgba(33, 63, 125, 0.1);
+  }
+  tr:nth-child(1) {
+    border-bottom: none;
+  }
 }
 
 .align-left, th {
   text-align: left;
 }
 
-tr {
-  border-bottom: 2px solid black;
-}
-
 .loading {
-  width: 50px;
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 5% auto;
   img {
-    width: 100%;
+    width: 50px;
   }
 }

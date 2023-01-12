@@ -1,7 +1,8 @@
 @import "../../scss/variables";
 
 .login {
-  margin: $base-margin * 4 0;
+  padding: $base-padding * 6;
+  background-color: $white;
   .logo {
     margin-bottom: $base-margin * 5;
   }

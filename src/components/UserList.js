@@ -1,12 +1,12 @@
 import { Link } from "react-router-dom";
 // static files
-import filter from "../icon/filter.svg"
-import loading from "../img/loading.png"
+// import filter from "../icon/filter.svg"
 
-const UserList = ({ user, isPending}) => {
+const UserList = ({ user }) => {
   return (
-    <table className="user-list">
-      {user && <tr>
+    <div className="table">
+        <table className="user-list">
+      {user && (<tr>
         <th>
           <div className="text-gray transform-uppercase font-xs display-i">Organization</div>
           
@@ -31,12 +31,11 @@ const UserList = ({ user, isPending}) => {
           <div className="text-gray transform-uppercase font-xs display-i">Status</div>
           
         </th>
-      </tr>}
+      </tr>)}
 
-      {isPending && <div className="loading"><img src={loading} alt="loading" /></div>}
 
         {user && user.map(u => (
-        <tr key={u.id}>
+            <tr key={u.id}>
             <td>
               <p className="text-primary font-xs">{u.orgName}</p>
             </td>
@@ -58,6 +57,7 @@ const UserList = ({ user, isPending}) => {
         </tr>
         ))}
     </table>
+    </div>
   );
 }
  
