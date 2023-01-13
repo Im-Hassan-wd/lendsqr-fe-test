@@ -33,7 +33,7 @@ const UserDetails = () => {
               <div className="bg-white p-2 mt-2">
               <span><img className="avatar" src={avatar} alt="avatar" /></span> |
               <span>
-                <h1 className="font-lg mb-1 text-primary">{user.userName}</h1>
+                <h1 className="font-lg mb-1 text-primary">{user.profile.firstName} {user.profile.lastName}</h1>
               </span>
               <span></span>
               <span></span>

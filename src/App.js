@@ -17,6 +17,8 @@ function App() {
     <div className="App">
       <Routes>
         <Route index element={<Dashboard />} />
+        <Route path="home" element={<Navigate to="/" />} />
+        <Route path="/" element={<Dashboard />} />
         <Route path="dashboard" element={<Dashboard user={user} isPending={isPending} error={error} />} />
         <Route path="login" element={<Login />} />
         <Route path="user" element={<User 
