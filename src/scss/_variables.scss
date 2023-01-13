@@ -4,12 +4,14 @@ $blue: #39CDCC;
 $gray: #545F7D;
 $white: #ffff;
 $light: #FBFBFB;
+$black: #213f7d0f;
 
 // color palette
 $colors: (
   "primary": $primary,
   "blue": $blue,
   "gray": $gray,
+  "black": $black, 
   "light": #FBFBFB,
   "white": #fff,
   "pending": #E9B200,
@@ -33,6 +35,6 @@ $box-shadow-lg: 3px 5px 20px rgba(0, 0, 0, 0.04);
 $base-font-size: 20px;
 $font-size-xs: $base-font-size - 8;
 $font-size-sm: $base-font-size - 6;
-$font-size-md: $base-font-size;
+$font-size-md: $base-font-size - 4;
 $font-size-lg: $base-font-size + 4;
 $font-size-xl: $base-font-size + 10;

@@ -24,11 +24,38 @@
     text-decoration: line-through;
   }
   span {
-    border-right: $base-border-thickness solid rgba(33, 63, 125, 0.06);
+    border-right: $base-border-thickness solid $black;
     .avatar {
       width: 90px;
       height: 90px;
       border-radius: 50px;
     }
+  }
+  .info {
+    ul {
+      border-bottom: $base-border-thickness solid $black;
+    }
+    div {
+      font-size: $base-font-size - 4;
+    }
+    h5 {
+      font-weight: 500;
+      font-size: $font-size-xs + 2;
+    }
+    p {
+      font-weight: 400;
+      text-transform: uppercase;
+    }
+    h5.email {
+      display: -webkit-box;
+      -webkit-line-clamp: 1;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px;
   }
 }
