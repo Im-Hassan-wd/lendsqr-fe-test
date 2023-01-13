@@ -63,7 +63,21 @@ const UserDetails = () => {
                   <li><button className="text-primary pb-1 mr-1">App and System</button></li>
                 </ul>
               </div>
-              <Info user={user} />
+              <div className="bg-white mt-3 p-2">
+                <Info user={user} 
+                  title="Personal information"
+                  first={user.profile.firstName}
+                  last={user.profile.lastName}
+                  number={user.phoneNumber.slice(0, 12)}
+                  email={user.email}
+                  bvn={user.profile.bvn}
+                  sex={user.profile.gender}
+                  ms="Married"
+                  children="None"
+                  res="Remote"
+                />
+                <Info user={user} title="Education and Employment" />
+              </div>
              </div>
             )}
           </div>
