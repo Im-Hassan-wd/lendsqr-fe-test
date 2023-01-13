@@ -1,9 +1,11 @@
+import Education from "./Education";
 import PersonalInfo from "./PersonalInfo";
 
 const Info = ({ user }) => {
     return (
       <div className="info bg-white mt-3 p-2">
         <PersonalInfo user={user} />
+        <Education user={user} />
       </div>
     );
 }
