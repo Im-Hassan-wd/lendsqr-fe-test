@@ -9,6 +9,7 @@
     align-items: center;
     background-color: $bg-color;
     cursor: pointer;
+    font-family: 'Work Sans', sans-serif; 
 }
 
 .btn {
@@ -25,7 +26,7 @@
 }
 .btn-outlined-#{$key} {
     @include btn(#fff);
-    border: $base-border-thickness - 1 solid $val;
+    border: $base-border-thickness solid $val;
     &:hover {
       background-color: $val;
     }

@@ -1,15 +1,34 @@
+@import "../../scss/variables";
+
 .user-details {
   .btn-wrap {
     button {
     width: 150px;
     }
   }
+  .tab-head {
+    button {
+      border: none;
+      background: none;
+      font-family: 'Work Sans', sans-serif;
+      font-size: $base-font-size - 4;
+      cursor: pointer;
+      border-bottom: 1px solid $white;
+    }
+  }
+  .tab-head:nth-child(1) button {
+    border-bottom: 1px solid $blue;
+
+  }
   .naira {
     text-decoration: line-through;
   }
   span {
+    border-right: $base-border-thickness solid rgba(33, 63, 125, 0.06);
     .avatar {
-      width: 80px;
+      width: 90px;
+      height: 90px;
+      border-radius: 50px;
     }
   }
 }
