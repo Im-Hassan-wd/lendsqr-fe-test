@@ -2,7 +2,7 @@ const PersonalInfo = ({ user }) => {
     return (
       <div className="">
         <div className="font-sm text-primary mb-1">Personal infomation</div>
-        <ul className="grid pb-2">
+        <ul className="grid pb-3">
           <li className="mr-1">
             <p className="text-gray font-xs m-0">Full name</p>
             <h5 className="text-primary m-0">{user.profile.firstName} {user.profile.lastName}</h5>
