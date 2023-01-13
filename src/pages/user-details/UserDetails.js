@@ -31,7 +31,7 @@ const UserDetails = () => {
             </div >
             <h1 className="font-lg mt-1 mb-2 text-primary">User details</h1>
             {isPending && <div className="loading"><img src={loading} alt="loading" /></div>}
-            {error && <div className="loading">{error}, let's <p onClick={window.location.reload()}>try again</p></div>}
+            {error && <div className="loading">{error}, but dont't fret let's <p onClick={() => window.location.reload()}>give it another shot</p></div>}
             {user && (
              <div>
               <div className="bg-white p-2 pb-0 mt-2">

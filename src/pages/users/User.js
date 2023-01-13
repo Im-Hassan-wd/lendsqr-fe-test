@@ -17,7 +17,7 @@ const User = ({ user, isPending, error, end, start, setStart, setEnd }) => {
           <div className="container">
             <h1 className="font-lg mt-2 mb-2 text-primary">Users</h1>
             <Card />
-            {error && <div className="">{error}, let's <p onClick={() => {window.location.reload()}} className="btn p-1">try again</p></div>}
+            {error && <div className="loading">{error}, but dont't fret let's <p onClick={() => window.location.reload()}>give it another shot</p></div>}
             {isPending && <div className="loading"><img src={loading} alt="loading" /></div>}
             <div className="wrapper">
               {user && <Table 

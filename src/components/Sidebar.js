@@ -37,7 +37,7 @@ const Sidebar = () => {
         <h5 className="pl-2 mt-2">
           <a className="display-f align-center" href="#">
             <img className="mr-1"  src={home} alt="dashboard icon" />
-            <div className="font-sm text-gray-light-3"><Link to="dashboard">Dashboard</Link></div>
+            <div className="font-sm text-gray-light-3"><Link to="/">Dashboard</Link></div>
           </a>
         </h5>
         <p className="font-sm text-gray mt-2 pl-2">Customers</p>

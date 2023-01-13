@@ -18,7 +18,7 @@ function App() {
       <Routes>
         <Route index element={<Dashboard user={user} isPending={isPending} error={error} />} />
         <Route path="home" element={<Navigate to="/dashboard" />} />
-        <Route path="/" element={<Navigate to="/dashboard" />} />
+        <Route exact path="/" element={<Navigate to="/dashboard" />} />
         <Route path="dashboard" element={<Dashboard user={user} isPending={isPending} error={error} />} />
         <Route path="login" element={<Login />} />
         <Route path="user" element={<User 
