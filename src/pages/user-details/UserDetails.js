@@ -64,7 +64,7 @@ const UserDetails = () => {
                 </ul>
               </div>
               <div className="bg-white mt-3 pr-2 pl-2">
-                <Info user={user} title="Personal information" subT1="Full name" body1={user.profile.firstName} last={user.profile.lastName} subT2="Phone number" body2={user.phoneNumber.slice(0, 12)} subT3="Email address" body3={user.email} subT4="Bvn" body4={user.profile.bvn} subT5="Gender" body5={user.profile.gender} subT6="Marital status" body6="Married" subT7="Children" body7="None" subT8="Type of residence" body8="Remote"/>
+                <Info user={user} title="Personal information" subT1="Full name" first={user.profile.firstName} last={user.profile.lastName} subT2="Phone number" body2={user.phoneNumber.slice(0, 12)} subT3="Email address" body3={user.email} subT4="Bvn" body4={user.profile.bvn} subT5="Gender" body5={user.profile.gender} subT6="Marital status" body6="Married" subT7="Children" body7="None" subT8="Type of residence" body8="Remote"/>
                 <Info user={user} subT="Education and Employment" subT1="Level of education" education={user.education.level} subT2="Employment status" status={user.education.employmentStatus} subT3="Sector of employment" sector={user.education.sector} subT4="Duration of employment" duration={user.education.duration} subT5="Gender" gender={user.profile.gender} subT6="Marital status" ms="Married" subT7="Children" children="None" subT8="Type of residence" res="Remote" />
               </div>
              </div>
