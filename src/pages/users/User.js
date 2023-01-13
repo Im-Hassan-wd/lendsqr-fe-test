@@ -11,7 +11,7 @@ import Filter from "../../components/Filter";
 const User = ({ user, isPending, error, end, start, setStart, setEnd }) => {
     return (
       <div className="dashboard bg-light">
-        <Navbar />
+        {/* <Navbar /> */}
         <div className="display-f">
           <Sidebar />
           <div className="container">

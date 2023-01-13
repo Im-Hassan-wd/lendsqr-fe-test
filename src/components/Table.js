@@ -2,9 +2,10 @@ import { Link } from "react-router-dom";
 // static files
 // import filter from "../icon/filter.svg"
 
-const Table = ({ user, end, start, setStart, setEnd }) => {
+const Table = ({ user, end, start }) => {
   return (
-    <table className="user-list bg-white">
+    <div className="p-2 table bg-white">
+      <table className="user-list">
       {user && <tr>
         <th>
           <div className="text-gray transform-uppercase font-xs display-i">Organization</div>
@@ -55,6 +56,7 @@ const Table = ({ user, end, start, setStart, setEnd }) => {
         </tr>
         )).slice(start, end)}
     </table>
+    </div>
   );
 }
  

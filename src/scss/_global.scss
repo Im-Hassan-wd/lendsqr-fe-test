@@ -10,6 +10,7 @@ body {
   box-sizing: border-box;
   font-family: 'Work Sans', sans-serif;
   background: $light;
+  overflow-x: auto;
 }
   
 a {
@@ -26,7 +27,7 @@ li {
 }
 
 .sidebar {
-  width: 300px;
+  min-width: 230px;
 }
 
 .sidebar li {
@@ -40,18 +41,22 @@ li {
 
 @media (max-width: 800px) {
   .sidebar {
-    width: 50px;
+    min-width: 45px;
     overflow: hidden;
   }
 }
 
 table {
-  overflow-x: hidden;
-  width: 980px;
   border-collapse: collapse;
+
+}
+
+.table {
+  display: flex;
+  // width: 980px;
   box-shadow: $box-shadow-lg;
-  display: inline-block;
   padding: $base-padding * 2 $base-padding * 3;
+  overflow-x: hidden;
   th, td {
     margin-right: $base-margin;
   }

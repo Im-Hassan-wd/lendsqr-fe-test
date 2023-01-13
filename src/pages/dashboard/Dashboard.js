@@ -12,7 +12,7 @@ const Dashboard = ({ user, isPending, error }) => {
         <Navbar />
         <div className="display-f">
           <Sidebar />
-          <div className="container">
+          <div className="container mr-2">
             <h1 className="font-lg mt-2 mb-2 text-primary">Dashboard</h1>
             <Card />
             {isPending && <div className="loading"><img src={loading} alt="loading" /></div>}

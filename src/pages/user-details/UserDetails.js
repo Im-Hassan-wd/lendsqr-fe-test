@@ -18,7 +18,7 @@ const UserDetails = () => {
   console.log(user)
   return (
     <div className="user-details">
-      <Navbar />
+      {/* <Navbar /> */}
         <div className="display-f">
           <Sidebar />
           <div className="container">
