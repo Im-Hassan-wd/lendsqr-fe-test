@@ -1,5 +1,5 @@
 const Pagination = ({ user, start, end, setStart, setEnd}) => {
-  console.table(user)
+ 
   return (
     <div className="pagination row-flex">
       {/* <div className="div">
