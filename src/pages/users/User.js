@@ -8,7 +8,7 @@ import Table from "../../components/Table";
 import Pagination from "../../components/Pagination";
 import Filter from "../../components/Filter";
 
-const User = ({ user, isPending }) => {
+const User = ({ user, isPending, error }) => {
     return (
       <div className="dashboard bg-light">
         <Navbar />
@@ -17,6 +17,7 @@ const User = ({ user, isPending }) => {
           <div className="container">
             <h1 className="font-lg mt-2 mb-2 text-primary">Users</h1>
             <Card />
+            {error && <div className="">{error}, let's <p onClick={() => {window.location.reload()}} className="btn p-1">try again</p></div>}
             {isPending && <div className="loading"><img src={loading} alt="loading" /></div>}
             <div className="wrapper">
               {user && <Table user={user.slice(0, 10)} isPending={isPending} />}
