@@ -63,20 +63,9 @@ const UserDetails = () => {
                   <li><button className="text-primary pb-1 mr-1">App and System</button></li>
                 </ul>
               </div>
-              <div className="bg-white mt-3 p-2">
-                <Info user={user} 
-                  title="Personal information"
-                  first={user.profile.firstName}
-                  last={user.profile.lastName}
-                  number={user.phoneNumber.slice(0, 12)}
-                  email={user.email}
-                  bvn={user.profile.bvn}
-                  sex={user.profile.gender}
-                  ms="Married"
-                  children="None"
-                  res="Remote"
-                />
-                <Info user={user} title="Education and Employment" />
+              <div className="bg-white mt-3 pr-2 pl-2">
+                <Info user={user} title="Personal information" title1="Full name" first={user.profile.firstName} last={user.profile.lastName} title2="Phone number" number={user.phoneNumber.slice(0, 12)} title3="Email address" email={user.email} title4="Bvn" bvn={user.profile.bvn} title5="Gender" gender={user.profile.gender} title6="Marital status" ms="Married" title7="Children" children="None" title8="Type of residence" res="Remote"/>
+                <Info user={user} title="Education and Employment" title1="Level of education" first={user.education.level} title2="Employment status" number={user.education.employmentStatus} title3="Sector of employment" email={user.email} title4="Bvn" bvn={user.profile.bvn} title5="Gender" gender={user.profile.gender} title6="Marital status" ms="Married" title7="Children" children="None" title8="Type of residence" res="Remote" />
               </div>
              </div>
             )}
