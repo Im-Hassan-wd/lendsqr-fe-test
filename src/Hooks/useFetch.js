@@ -28,7 +28,7 @@ const useFetch = (url) => {
         console.log("fetch aborted")
       } else {
         setError(err.message);
-        setIsPending(true)
+        setIsPending(false)
       }
     }
   }
