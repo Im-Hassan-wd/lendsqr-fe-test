@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 // static files
 // import filter from "../icon/filter.svg"
 
-const Table = ({ user }) => {
+const Table = ({ user, end, start, setStart, setEnd }) => {
   return (
     <table className="user-list bg-white">
       {user && <tr>
@@ -53,7 +53,7 @@ const Table = ({ user }) => {
               <p className="text-blacklist font-xs bg-blacklist-light-9 p-1 br-full">{u.education.employmentStatus}</p>
             </td>
         </tr>
-        ))}
+        )).slice(start, end)}
     </table>
   );
 }

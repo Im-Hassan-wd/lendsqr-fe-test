@@ -37,7 +37,16 @@ function App() {
         <Route index element={<Dashboard />} />
         <Route path="dashboard" element={<Dashboard user={user} isPending={isPending} error={error} />} />
         <Route path="login" element={<Login />} />
-        <Route path="user" element={<User user={user} isPending={isPending} error={error}/>} />
+        <Route path="user" element={<User 
+          user={user} 
+          isPending={isPending} 
+          error={error}
+          end={end}
+          start={start}
+          setEnd={setEnd}
+          setStart={setStart}
+          />} 
+        />
         <Route path='/user/:id' element={<UserDetails />} />
       </Routes>
     </div>
