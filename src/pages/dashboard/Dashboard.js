@@ -16,7 +16,7 @@ const Dashboard = ({ user, isPending, error }) => {
             <h1 className="font-lg mt-2 mb-2 text-primary">Dashboard</h1>
             <Card />
             {isPending && <div className="loading"><img src={loading} alt="loading" /></div>}
-            {error && <div className="loading">{error}, let's <p onClick={window.location.reload()} className="btn p-1">try again</p></div>}
+            {error && <div className="loading">{error}, let's <p onClick={() => window.location.reload()} className="btn p-1">try again</p></div>}
             {user && <Table user={user.slice(0, 10)} isPending={isPending} />}
           </div>
         </div>
