@@ -22,12 +22,6 @@
   a {
     text-decoration: underline;
   }
-  .pointer-none {
-    pointer-events: none;
-  }
-  .pointer-all {
-    pointer-events: all;
-  }
   @media (max-width: 783px) {
     .active {
       position: absolute;
@@ -37,9 +31,18 @@
       padding: $base-padding;
       box-shadow: $base-box-shadow;
       display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      li, img {
+        margin: 0;
+        padding-bottom: $base-padding / 2;
+      }
+      p.avatar-p {
+        margin: 0;
+      }
     }
   }
-  @media (max-width: 640px) {
+  @media (max-width: 740px) {
     input {
       max-width: 150px;
       margin-left: $base-margin;

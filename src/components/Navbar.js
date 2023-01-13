@@ -22,15 +22,17 @@ const Navbar = () => {
           </div>
         </div>
         <ul className="display-f align-center">
-          <li className="ml-2 text-md text-hover-primary"><a className="text-primary" href="#">Docs</a></li>
-          <li className="ml-3 text-md text-hover-primary"><img className="notification" src={notification} alt="notification"/></li>
-          <li className="text-md text-hover-primary display-f align-center">
-            <div className="display-f align-center active">
-              <img className="ml-1 br-full avatar" src={avatar} alt="avatar" />
-              <p className="text-primary ml-1">Adedeji</p>
-            </div>
-            <button ><img src={dropdown} alt="drop down" /></button>
+          <li className="li active display-f align-center">
+            <li className="ml-2 text-md text-hover-primary"><a className="text-primary" href="#">Docs</a></li>
+            <li className="ml-3 text-md text-hover-primary"><img className="notification" src={notification} alt="notification"/></li>
+            <li className="text-md text-hover-primary display-f align-center">
+              <div className="display-f align-center">
+                <img className="ml-1 br-full avatar" src={avatar} alt="avatar" />
+                <p className="avatar-p text-primary ml-1">Adedeji</p>
+              </div>
+            </li>
           </li>
+          <button ><img src={dropdown} alt="drop down" /></button>
         </ul>
       </div>
     </nav>
