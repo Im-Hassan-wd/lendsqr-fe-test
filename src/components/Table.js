@@ -38,7 +38,7 @@ const Table = ({ user, end, start, setStart, setEnd }) => {
               <p className="text-primary font-xs">{u.orgName}</p>
             </td>
             <td>
-              <p className="text-primary font-xs"><Link>{u.userName}</Link></p>
+              <p className="text-primary font-xs"><Link to={`/user/${u.id}`}>{u.userName}</Link></p>
             </td>
             <td>
               <p className="text-primary font-xs">{u.email}</p>
