@@ -1,5 +1,7 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { Routes, Route, Navigate } from "react-router-dom"
+// hooks
+import useFetch from "./Hooks/useFetch";
 // pages
 import Dashboard from "./pages/dashboard/Dashboard";
 import Login from "./pages/login/Login";
@@ -9,6 +11,8 @@ import User from "./pages/users/User";
 function App() {
   const [start, setStart] = useState(0)
   const [end, setEnd] = useState(10)
+  const { data: user, isPending, error} = useFetch("https://6270020422c706a0ae70b72c.mockapi.io/lendsqr/api/v1/users")
+  console.log(user) 
 
   return (
     <div className="App">

@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-const usefetch = (url) => {
+const useFetch = (url) => {
   const [data, setData] = useState(null);
   const [isPending, setIsPending] = useState(true)
   const [error, setError] = useState(null)
@@ -9,9 +9,9 @@ const usefetch = (url) => {
     fetchData(url)
     }, [url]);
     
-  const fetchData = async () => {
+  const fetchData = async (url) => {
     try {
-      const res = await fetch()
+      const res = await fetch(url)
       const data = await res.json();
       setIsPending(false)
     
@@ -26,4 +26,4 @@ const usefetch = (url) => {
   return { data, isPending, error}
 }
  
-export default usefetch;
+export default useFetch;
