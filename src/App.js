@@ -12,7 +12,6 @@ function App() {
   const [start, setStart] = useState(0)
   const [end, setEnd] = useState(10)
   const { data: user, isPending, error} = useFetch("https://6270020422c706a0ae70b72c.mockapi.io/lendsqr/api/v1/users")
-  console.log(user) 
 
   return (
     <div className="App">
