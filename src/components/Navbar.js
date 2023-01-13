@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"
 // static files
 import logo from "../img/logo.svg"
 import notification from "../icon/notification.svg"
@@ -11,7 +12,7 @@ const Navbar = () => {
       <nav className="navbar">
         <div className="container">
           <div className="container">
-            <h1 className='site-title logo'><img src={logo} alt="site logo" /></h1>
+            <Link to="/" className='site-title logo'><img src={logo} alt="site logo" /></Link>
             <div className="display-f align-center">
                 <input type="text" placeholder="search for anything" className="form-input form-input-half m-0 ml-4 text-primary p-1"/>
                 <button className='btn-blue border-half-radius text-white p-2'><img src={search} alt="search icon" /></button>

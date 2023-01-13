@@ -2,6 +2,8 @@ import { useParams } from "react-router-dom";
 // static files
 import loading from "../../img/loading.png"
 import avatar from "../../img/d-avatar.png"
+import star from "../../icon/star.svg"
+import starFill from "../../icon/star-fill.svg"
 import "./UserDetails.scss"
 //components
 import Navbar from "../../components/Navbar";
@@ -34,9 +36,20 @@ const UserDetails = () => {
               <span><img className="avatar" src={avatar} alt="avatar" /></span> |
               <span>
                 <h1 className="font-lg mb-1 text-primary">{user.profile.firstName} {user.profile.lastName}</h1>
+                <p className="font-sm text-gray">{user.accountNumber}</p>
               </span>
-              <span></span>
-              <span></span>
+              <span>
+                <p className="font-sm text-gary">User's Tier</p>
+                <div className="">
+                  <img src={starFill} alt="start" />
+                  <img src={star} alt="start" />
+                  <img src={star} alt="start" />
+                </div>
+              </span>
+              <span>
+                <h1 className="font-lg mb-1 text-primary"><span className="naira">N</span>{user.profile.firstName}</h1>
+                <p className="font-sm text-gray">{user.accountNumber}</p>
+              </span>
             </div>
             )}
           </div>
