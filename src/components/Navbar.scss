@@ -1,15 +1,49 @@
+@import "../scss/variables";
+
 .navbar {
+  position: relative;
   .logo img {
     width: 100px;
   }
-  .avatar {
-    width: 40px;
+  .avatar{
+    width: 35px;
+  } 
+  .notification {
+    width: 22px;
   }
   li img, li p {
     cursor: pointer;
   }
+  li button {
+    border: none;
+    background: none;
+    padding: 0;
+  }
   a {
     text-decoration: underline;
+  }
+  .pointer-none {
+    pointer-events: none;
+  }
+  .pointer-all {
+    pointer-events: all;
+  }
+  @media (max-width: 783px) {
+    .active {
+      position: absolute;
+      top: 70px;
+      background: $white;
+      right: 0px;
+      padding: $base-padding;
+      box-shadow: $base-box-shadow;
+      display: flex;
+    }
+  }
+  @media (max-width: 640px) {
+    input {
+      max-width: 150px;
+      margin-left: $base-margin;
+    }
   }
 }
 
