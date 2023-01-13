@@ -1,4 +1,5 @@
 import Education from "./Education";
+import Guarantor from "./Guarantor";
 import PersonalInfo from "./PersonalInfo";
 import Social from "./Social";
 
@@ -8,6 +9,7 @@ const Info = ({ user }) => {
         <PersonalInfo user={user} />
         <Education user={user} />
         <Social user={user} />
+        <Guarantor user={user} />
       </div>
     );
 }
