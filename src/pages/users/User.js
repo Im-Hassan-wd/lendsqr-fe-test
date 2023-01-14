@@ -5,13 +5,20 @@ import Card from "../../components/Card";
 import Navbar from "../../components/Navbar";
 import Sidebar from "../../components/Sidebar";
 import Table from "../../components/Table";
+import { Helmet } from "react-helmet-async";
+// components
 import Pagination from "../../components/Pagination";
 import Filter from "../../components/Filter";
 
 const User = ({ user, isPending, error, end, start, setStart, setEnd }) => {
     return (
       <div className="dashboard bg-light">
-        {/* <Navbar /> */}
+        <Helmet>
+          <title>User | Lendsqr</title>
+          <meta name="description" content="At Lendsqr, many of our lenders use web apps to reach over half a million customers" />
+          <link rel="canonical" href="/user" />
+        </Helmet>
+        <Navbar />
         <div className="display-f">
           <Sidebar />
           <div className="container">
