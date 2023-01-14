@@ -30,7 +30,7 @@ const User = ({ user, isPending, error }) => {
             {error && <div className="error mt-2 text-primary font-lg bg-white p-2">{error}, but don't fret-<p className="text-white bg-primary p-1 br-md display-i-b mt-1" onClick={() => window.location.reload()}> let's give it another shot</p></div>}
             {isPending && <div className="loading"><img src={loading} alt="loading" /></div>}
             <div className="wrapper">
-              {user && <Table user={user.slice(start, end)} isPending={isPending}/>}
+              {/* {user && <Table user={user.slice(start, end)} isPending={isPending}/>} */}
               {user && <Filter /> }
             </div>
             {user && <Pagination user={user} start={start} setStart={setStart} end={end} setEnd={setEnd}/>}
