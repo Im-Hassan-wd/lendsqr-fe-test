@@ -53,7 +53,7 @@ table {
 
 .table {
   display: flex;
-  // width: 980px;
+  width: 980px;
   box-shadow: $box-shadow-lg;
   padding: $base-padding * 2 $base-padding * 3;
   overflow-x: hidden;
@@ -65,6 +65,13 @@ table {
   }
   tr:nth-child(1) {
     border-bottom: none;
+  }
+  th {
+    cursor: pointer;
+    img {
+      margin-bottom: -$base-margin / 4;
+      margin-left: $base-margin / 2;
+    }
   }
 }
 
