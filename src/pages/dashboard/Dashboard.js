@@ -10,12 +10,12 @@ import Navbar from "../../components/Navbar";
 export default function Dashboard ({ user, isPending, error }) {
   return (
     <div className="dashboard bg-light">
-      {/* <Helmet>
+      <Helmet>
         <title>Dashboard | Lendsqr</title>
         <meta name="description" content="At Lendsqr, many of our lenders use web apps to reach over half a million customers" />
         <link rel="canonical" href="/" />
       </Helmet>
-      <Navbar /> */}
+      <Navbar />
       <div className="display-f">
         <Sidebar />
         <div className="container mr-2">

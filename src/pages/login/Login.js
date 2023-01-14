@@ -1,4 +1,5 @@
 // static files
+import { Helmet } from 'react-helmet-async';
 import loginImg from '../../img/login.svg'
 import logo from '../../img/logo.svg'
 import "./Login.scss"
@@ -6,6 +7,11 @@ import "./Login.scss"
 const Login = () => {
   return (
     <div className="login">
+      <Helmet>
+        <title>Home | Lendsqr</title>
+        <meta name="description" content="Login reach over half a million customers" />
+        <link rel="canonical" href="/login" />
+      </Helmet>
       <div className="logo">
         <img src={logo} alt="logo" />
       </div>
