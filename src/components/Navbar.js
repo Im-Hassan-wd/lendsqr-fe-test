@@ -22,7 +22,7 @@ const Navbar = () => {
           </div>
         </div>
         <ul className="display-f align-center">
-          <li className="li active display-f align-center">
+          <div className="li active display-f align-center">
             <li className="ml-2 text-md text-hover-primary"><a className="text-primary" href="#">Docs</a></li>
             <li className="ml-3 text-md text-hover-primary"><img className="notification" src={notification} alt="notification"/></li>
             <li className="text-md text-hover-primary display-f align-center">
@@ -31,7 +31,7 @@ const Navbar = () => {
                 <p className="avatar-p text-primary ml-1">Adedeji</p>
               </div>
             </li>
-          </li>
+          </div>
           <button ><img src={dropdown} alt="drop down" /></button>
         </ul>
       </div>

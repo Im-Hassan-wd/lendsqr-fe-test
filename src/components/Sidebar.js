@@ -28,7 +28,7 @@ const Sidebar = () => {
     return (
       <div className="sidebar bg-white">
         <h5 className="pl-2">
-          <a className="display-f align-center" href="#">
+          <a className="display-f align-center">
             <img className="mr-1" src={briefcase} alt="briefcase icon" />
             <div className="font-sm text-gray">Switch Organization</div>
             <img className="ml-1" src={caretdown} alt="caret down icon" />
