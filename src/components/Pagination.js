@@ -4,8 +4,8 @@ import prev from "../icon/prev.svg"
 import next from "../icon/next.svg"
 const Pagination = ({ user, start, end, setStart, setEnd }) => {
   return (
-    <div className="pagination row-flex mt-1">
-      <div className="div">
+    <div className="pagination row-flex mt-1 page-btn-wrap">
+      <div className="mb-2">
         <div className="display-f align-center">
         <div className='font-sm mr-1 bg-light'>Showing</div>
         <div className="">
