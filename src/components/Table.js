@@ -13,23 +13,23 @@ const Table = ({ user, end, start }) => {
         </th>
         <th className="">
           <div className="text-gray transform-uppercase font-xs display-i">Username</div>
-          
+          <img src={filter} alt="filter" />
         </th>
         <th className="">
           <div className="text-gray transform-uppercase font-xs display-i">Email</div>
-          
+          <img src={filter} alt="filter" />
         </th>
         <th className="">
           <div className="text-gray transform-uppercase font-xs display-i">Phone Number</div>
-          
+          <img src={filter} alt="filter" />
         </th>
         <th className="">
           <div className="text-gray transform-uppercase font-xs display-i">Date Joined</div>
-          
+          <img src={filter} alt="filter" />
         </th>
         <th className="">
           <div className="text-gray transform-uppercase font-xs display-i">Status</div>
-          
+          <img src={filter} alt="filter" />
         </th>
       </tr>}
 
