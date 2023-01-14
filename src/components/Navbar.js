@@ -31,7 +31,7 @@ const Navbar = () => {
               </div>
             </li>
           </div>
-          <button ><img src={dropdown} alt="drop down" /></button>
+          <button className="nav-btn"><img src={dropdown} alt="drop down" /></button>
         </ul>
       </div>
     </nav>

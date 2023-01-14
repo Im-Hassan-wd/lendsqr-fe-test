@@ -1,22 +1,25 @@
+import "./Pagination.scss"
+import dropdown from "../icon/dropdown.svg"
 const Pagination = ({}) => {
- 
   return (
-    <div className="pagination row-flex mt-2">
+    <div className="pagination container row-flex mt-2">
       <div className="div">
         <div className="display-f align-center">
-        <div className='font-xs mr-1 bg-light'>Showing</div>
-        <input className='font-xs mr-1' type="number" />
-        <div className='font-xs mr-1'>out of 100</div>
+        <div className='font-sm mr-1 bg-light'>Showing</div>
+        <div className="">
+          <input className='font-sm mr-1 page-input' type="number" placeholder="10" />
+        </div>
+        <div className='font-sm mr-1'>out of 100</div>
         </div>
       </div>
       <div className='align-center'>
-        <button className='btn pl-1 pr-1'>-</button>
-        <button>1</button>
-        <button>2</button>
-        <span>.</span><span>.</span><span>.</span>
-        <button>3</button>
-        <button>4</button>
-        <button>+</button>
+        <button className='page-btn'>-</button>
+        <span className="pl-1">1</span>
+        <span className="pl-1">2</span>
+        <span className="pl-1">.</span><span>.</span><span>.</span>
+        <span className="pl-1">3</span>
+        <span className="pl-1">4</span>
+        <button className='page-btn'>+</button>
       </div>
       {/* {start === 0  ? 
         <button className="disable">prev</button> :

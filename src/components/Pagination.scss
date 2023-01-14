@@ -1,0 +1,17 @@
+@import "../scss/variables";
+
+.page-btn {
+  background: $black;
+  padding: $base-padding / 2 $base-padding + 2;
+  color: $primary;
+  border: none;
+  margin: 0 $base-margin;
+}
+
+.page-input {
+  background: $black;
+  width: 40px;
+  height: 25px;
+  border: none;
+  padding: 0 $base-padding;
+}
