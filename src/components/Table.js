@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 // static files
-// import filter from "../icon/filter.svg"
+import filter from "../icon/filter.svg"
 
 const Table = ({ user, end, start }) => {
   return (
@@ -9,7 +9,7 @@ const Table = ({ user, end, start }) => {
       {user && <tr>
         <th>
           <div className="text-gray transform-uppercase font-xs display-i">Organization</div>
-          
+          <img src={filter} alt="filter" />
         </th>
         <th className="">
           <div className="text-gray transform-uppercase font-xs display-i">Username</div>
