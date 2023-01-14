@@ -31,7 +31,7 @@ const User = ({ user, isPending, error }) => {
             {isPending && <div className="loading"><img src={loading} alt="loading" /></div>}
             <div className="wrapper">
               {user && <Table user={user.slice(start, end)} isPending={isPending}/>}
-              {/* {user && <Filter /> } */}
+              {user && <Filter /> }
             </div>
             {user && <Pagination user={user} start={start} setStart={setStart} end={end} setEnd={setEnd}/>}
           </div>

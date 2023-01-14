@@ -1,15 +1,23 @@
 @import "../../scss/variables";
 
-.user-details {
-  .btn-wrap {
+.user-details  {
+  button.back {
+    background: none;
+    border: none;
+    font-family: 'Work Sans', sans-serif;
+    cursor: pointer;
+  }
+  div.btn-wrap {
     button {
-    width: 150px;
+      width: 150px;
+      padding: $base-padding 0;
+      margin-bottom: -$base-margin * 2;
+      font-weight: bold;
+      text-transform: uppercase;
     }
   }
   .tab-head {
     display: flex;
-    li {
-    }
     button {
       border: none;
       background: none;
@@ -18,16 +26,18 @@
       cursor: pointer;
       border-bottom: 1px solid $white;
     }
+    span {
+      border: 0;
+    }
   }
-  .tab-head:nth-child(1) button {
+  .tab-head li:nth-child(1) > button {
     border-bottom: 1px solid $blue;
-
   }
   .naira {
     text-decoration: line-through;
   }
   span {
-    border-right: $base-border-thickness solid $black;
+    border-right: $base-border-thickness + 1 solid $black;
     .avatar {
       width: 90px;
       height: 90px;
@@ -60,5 +70,29 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 10px;
+  }
+}
+
+@media (max-width: 870px) {
+  .tab-head {
+    overflow: scroll;
+  }
+}
+
+@media (max-width: 540px) {
+  .back {
+    .back {
+      display: none;
+    }
+  }
+  .user-details {
+    div.btn-wrap {
+      button {
+        width: 125px;
+      }
+    }
+  }
+  .btn-navi {
+    display: block;
   }
 }

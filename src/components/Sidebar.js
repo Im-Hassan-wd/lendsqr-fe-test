@@ -23,6 +23,7 @@ import home from "../icon/home.svg"
 import badge from "../icon/badge.svg"
 import clipboard from "../icon/clipboard.svg"
 import sliders from "../icon/sliders.svg"
+import login from "../icon/login.svg"
 
 const Sidebar = () => {
     return (
@@ -68,6 +69,10 @@ const Sidebar = () => {
           <SideList img={sliders} text="Preferences" link={"#"} />
           <SideList img={badge} text="Loan Products" link={"#"} />
           <SideList img={clipboard} text="Savings Products" link={"#"} />
+        </ul>
+        <ul className="mt-4">
+          <SideList img={login} text="Login" link={"#"} />
+          <li className="ml-1 font-xs text-primary">V 1.2.0</li>
         </ul>
       </div>
     );

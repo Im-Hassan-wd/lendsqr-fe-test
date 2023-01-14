@@ -25,14 +25,15 @@
   @media (max-width: 783px) {
     .active {
       position: absolute;
-      top: 70px;
+      top: 90px;
       background: $white;
       right: 0px;
       padding: $base-padding;
-      box-shadow: $base-box-shadow;
+      box-shadow: $box-shadow-lg;
       display: flex;
       flex-direction: column;
       align-items: flex-start;
+      display: none;
       li, img {
         margin: 0;
         padding-bottom: $base-padding / 2;

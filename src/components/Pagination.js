@@ -9,7 +9,7 @@ const Pagination = ({ user, start, end, setStart, setEnd }) => {
         <div className="display-f align-center">
         <div className='font-sm mr-1 bg-light'>Showing</div>
         <div className="">
-          <input className='font-sm mr-1 page-input' type="number" placeholder="10" />
+          <input className='font-sm mr-1 page-input' type="number" placeholder={end} />
         </div>
         <div className='font-sm mr-1'>out of 100</div>
         </div>

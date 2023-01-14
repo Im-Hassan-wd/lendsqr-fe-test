@@ -1,19 +1,20 @@
 import { Helmet } from "react-helmet-async"; 
-import { useParams } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 // static files
 import loading from "../../img/loading.png"
-import avatar from "../../img/d-avatar.png"
+import arrowBack from "../../icon/arrow-back.svg"
 import star from "../../icon/star.svg"
 import starFill from "../../icon/star-fill.svg"
 import "./UserDetails.scss"
 //components
 import Navbar from "../../components/Navbar";
 import Sidebar from "../../components/Sidebar";
+import Info from "../../components/Info";
 // hooks
 import useFetch from "../../Hooks/useFetch"
-import Info from "../../components/Info";
 
 const UserDetails = () => {
+  const navigate = useNavigate();
   const { id } = useParams();
   const { data: user, error, isPending} = useFetch("https://6270020422c706a0ae70b72c.mockapi.io/lendsqr/api/v1/users/" + id)
   
@@ -22,17 +23,20 @@ const UserDetails = () => {
     <Helmet>
       <title>User information | Lendsqr</title>
       <meta name="description" content="At Lendsqr, many of our lenders use web apps to reach over half a million customers" />
-      <link rel="canonical" href="/user/:id" />
+      <link rel="canonical" href={`/user/${id}`} />
     </Helmet>
     <Navbar />
       <div className="display-f">
         <Sidebar />
         <div className="container user-details-cont">
-          <div className="text-md text-primary row-flex">
-            <div className="font-xs text-primary mt-2">Back to user</div>
+          <div className="text-md btn-navi text-primary row-flex align-center">
+            <button onClick={() => navigate(-1) } className="display-f align-center font-xs back text-primary mt-2">
+              <img className="mr-1" src={arrowBack} alt="go back" />
+              <span className="back">Back to user</span>
+              </button>
             <div className="align-center btn-wrap">
-              <button className="btn-outlined-blacklist text-blacklist text-hover-white mr-1">Reset</button>
-              <button className="btn-outlined-active text-active text-hover-white  mr-1">Filter</button>
+              <button className="btn-outlined-blacklist text-blacklist text-hover-white mr-1">Blacklist user</button>
+              <button className="btn-outlined-active text-active text-hover-white  mr-1">Active user</button>
             </div>
           </div >
           <h1 className="font-lg mt-1 mb-2 text-primary">User details</h1>
@@ -41,7 +45,7 @@ const UserDetails = () => {
           {user && (
             <div>
             <div className="bg-white p-2 pb-0 mt-2">
-              <div className="display-f">
+              <div className="row">
                 <span className="pr-2 pl-2"><img className="avatar" src={user.profile.avatar} alt="avatar" /></span>
                 <span className="pr-2 pl-2">
                   <h1 className="font-lg mb-1 text-primary">{user.profile.firstName} {user.profile.lastName}</h1>
@@ -61,12 +65,15 @@ const UserDetails = () => {
                 </span>
               </div>
               <ul className="tab-head mt-3 row-flex">
-                <li><button className="text-blue pb-1 mr-1">General details</button></li>
-                <li><button className="text-primary pb-1 mr-1">Documents</button></li>
-                <li><button className="text-primary pb-1 mr-1">Bank details</button></li>
-                <li><button className="text-primary pb-1 mr-1">Loans</button></li>
-                <li><button className="text-primary pb-1 mr-1">Savings</button></li>
-                <li><button className="text-primary pb-1 mr-1">App and System</button></li>
+                <li className="mr-1"><button className="display-f text-blue pb-1">
+                  <span>General</span> <span className="pl-1">Details</span></button></li>
+                <li className="mr-1"><button className="text-primary pb-1">Documents</button></li>
+                <li className="mr-1"><button className="display-f text-primary pb-1">
+                  <span>Bank </span> <span className="pl-1">Details</span></button></li>
+                <li className="mr-1"><button className="text-primary pb-1">Loans</button></li>
+                <li className="mr-1"><button className="text-primary pb-1">Savings</button></li>
+                <li className="mr-1"><button className="display-f text-primary pb-1">
+                  <span>App</span> <span className="pl-1">and</span> <span className="pl-1">System</span></button></li>
               </ul>
             </div>
             <Info user={user} />

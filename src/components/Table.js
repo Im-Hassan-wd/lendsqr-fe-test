@@ -51,7 +51,11 @@ const Table = ({ user, end, start, setShowFilterContainer }) => {
               <p className="text-primary date font-xs">{u.createdAt.slice(0, 10)}</p>
             </td>
             <td>
-              <p className="text-blacklist btn-p font-xs bg-blacklist-light-9 p-1 br-full">{u.education.employmentStatus}</p>
+            {u.lastActiveDate.slice(0, 4) > 2050 && <p className="text-active btn-p font-xs bg-active-light-9 p-1 br-full">Active</p> }
+            {u.lastActiveDate.slice(0, 4) > 2030 && u.lastActiveDate.slice(0, 4) < 2050 && <p className="text-pending btn-p font-xs bg-pending-light-9 p-1 br-full">Pending</p> }
+            {u.lastActiveDate.slice(0, 4) > 2019 && u.lastActiveDate.slice(0, 4) < 2030 && <p className="text-gray btn-p font-xs bg-gray-light-9 p-1 br-full">Inactive</p> }
+            {u.lastActiveDate.slice(0, 4) < 2019 && <p className="text-blacklist btn-p font-xs bg-blacklist-light-9 p-1 br-full">Blacklisted</p> }
+              
             </td>
         </tr>
         )).slice(start, end)}
