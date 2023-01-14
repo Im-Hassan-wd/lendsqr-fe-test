@@ -1,8 +1,10 @@
+// static files
 import "./Pagination.scss"
-import dropdown from "../icon/dropdown.svg"
-const Pagination = ({}) => {
+import prev from "../icon/prev.svg"
+import next from "../icon/next.svg"
+const Pagination = ({ user, start, end, setStart, setEnd }) => {
   return (
-    <div className="pagination container row-flex mt-2">
+    <div className="pagination row-flex mt-1">
       <div className="div">
         <div className="display-f align-center">
         <div className='font-sm mr-1 bg-light'>Showing</div>
@@ -13,37 +15,29 @@ const Pagination = ({}) => {
         </div>
       </div>
       <div className='align-center'>
-        <button className='page-btn'>-</button>
+        {start === 0  ? 
+          <button className='page-btn disable'><img src={prev} alt="previous" /></button> :
+          <button className="page-btn" onClick={() => {
+            setStart(start -= 10)
+            setEnd(end -= 10)
+          }}><img src={prev} alt="previous" /></button>
+        }
+
         <span className="pl-1">1</span>
         <span className="pl-1">2</span>
         <span className="pl-1">.</span><span>.</span><span>.</span>
         <span className="pl-1">3</span>
         <span className="pl-1">4</span>
-        <button className='page-btn'>+</button>
+
+        {end === user.length ? 
+          <button className='page-btn disble'><img src={next} alt="next" /></button> :
+          <button className="page-btn" onClick={() => {
+            setStart(start += 10)
+            setEnd(end += 10)
+          }}><img src={next} alt="next" /></button>
+        }
+        
       </div>
-      {/* {start === 0  ? 
-        <button className="disable">prev</button> :
-        <button onClick={() => {
-          setStart(start -= 10)
-          setEnd(end -= 10)
-        }}>prev</button>
-      }
-
-      {end === user.length ? 
-        <button className="disable">next</button> :
-        <button onClick={() => {
-          setStart(start += 10)
-          setEnd(end += 10)
-        }}>next</button>
-      }
-
-      {end === user.length ? 
-        <button className="disable">Show All</button> :
-        <button onClick={() => {
-          setStart(0)
-          setEnd(user.length)
-        }}>Show All</button>
-      } */}
     </div>
   )
 }
