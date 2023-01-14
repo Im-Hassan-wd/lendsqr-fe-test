@@ -27,7 +27,7 @@ const UserDetails = () => {
     <Navbar />
       <div className="display-f">
         <Sidebar />
-        <div className="container">
+        <div className="container user-details-cont">
           <div className="text-md text-primary row-flex">
             <div className="font-xs text-primary mt-2">Back to user</div>
             <div className="align-center btn-wrap">

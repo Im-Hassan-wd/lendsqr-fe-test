@@ -7,9 +7,9 @@
     }
   }
   .tab-head {
-    // display: flex;
-    // width: 1000px;
-    // overflow-x: scroll;
+    display: flex;
+    li {
+    }
     button {
       border: none;
       background: none;
@@ -49,9 +49,9 @@
       font-weight: 400;
       text-transform: uppercase;
     }
-    h5.email {
+    h5.email, p.wrap {
       display: -webkit-box;
-      -webkit-line-clamp: 1;
+      -webkit-line-clamp: 0.5;
       -webkit-box-orient: vertical;
       overflow: hidden;
     }

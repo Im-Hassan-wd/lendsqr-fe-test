@@ -27,7 +27,7 @@ li {
 }
 
 .sidebar {
-  min-width: 230px;
+  width: 300px;
 }
 
 .sidebar li {
@@ -48,20 +48,32 @@ li {
 
 table {
   border-collapse: collapse;
-
 }
 
 .table {
-  display: flex;
-  min-width: 980px;
+  overflow-x: scroll;
   box-shadow: $box-shadow-lg;
   padding: $base-padding * 2 $base-padding * 3;
-  overflow-x: hidden;
   th, td {
     margin-right: $base-margin;
   }
   tr {
     border-bottom: 1px solid rgba(33, 63, 125, 0.1);
+  }
+  .tr {
+    td {
+      .name, .number, .date {
+        width: 140px;
+      } 
+      .email, .org{
+        display: inline-block;
+        width: 200px;
+      }
+      p.btn-p {
+        display: block;
+        width: initial;
+      }
+    }
   }
   tr:nth-child(1) {
     border-bottom: none;
@@ -71,6 +83,12 @@ table {
       margin-bottom: -$base-margin / 4;
       margin-left: $base-margin / 2;
     }
+  }
+}
+
+@media (max-width: 1304px) {
+  .table {
+    max-width: 600px;
   }
 }
 

@@ -34,24 +34,24 @@ const Table = ({ user, end, start, setShowFilterContainer }) => {
       </tr>}
 
         {user && user.map(u => (
-            <tr key={u.id}>
+            <tr className="tr" key={u.id}>
             <td>
-              <p className="text-primary font-xs">{u.orgName}</p>
+              <p className="text-primary org wrap font-xs">{u.orgName}</p>
             </td>
             <td>
-              <p className="text-primary font-xs"><Link to={`/user/${u.id}`}>{u.profile.firstName} {u.profile.lastName}</Link></p>
+              <p className="text-primary name font-xs"><Link to={`/user/${u.id}`}>{u.profile.firstName} {u.profile.lastName}</Link></p>
             </td>
             <td>
-              <p className="text-primary font-xs">{u.email}</p>
+              <p className="text-primary email font-xs">{u.email}</p>
             </td>
             <td>
-              <p className="text-primary font-xs">{u.phoneNumber}</p>
+              <p className="text-primary number font-xs">{u.phoneNumber.slice(0, 14)}</p>
             </td>
             <td>
-              <p className="text-primary font-xs">{u.createdAt.toLocaleString()}</p>
+              <p className="text-primary date font-xs">{u.createdAt.slice(0, 10)}</p>
             </td>
             <td>
-              <p className="text-blacklist font-xs bg-blacklist-light-9 p-1 br-full">{u.education.employmentStatus}</p>
+              <p className="text-blacklist btn-p font-xs bg-blacklist-light-9 p-1 br-full">{u.education.employmentStatus}</p>
             </td>
         </tr>
         )).slice(start, end)}
