@@ -9,7 +9,6 @@ import avatar from "../img/avatar.png"
 import "./Navbar.scss"
 
 const Navbar = () => {
-  const [showOption, setShowOption] = useState('')
 
   return (
     <nav className="navbar">

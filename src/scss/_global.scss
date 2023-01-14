@@ -67,11 +67,16 @@ table {
     border-bottom: none;
   }
   th {
-    cursor: pointer;
     img {
       margin-bottom: -$base-margin / 4;
       margin-left: $base-margin / 2;
     }
+  }
+}
+
+.user { 
+  th {
+    cursor: pointer;
   }
 }
 

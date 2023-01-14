@@ -1,8 +1,8 @@
-const Pagination = ({ user, start, end, setStart, setEnd}) => {
+const Pagination = ({}) => {
  
   return (
-    <div className="pagination row-flex">
-      {/* <div className="div">
+    <div className="pagination row-flex mt-2">
+      <div className="div">
         <div className="display-f align-center">
         <div className='font-xs mr-1 bg-light'>Showing</div>
         <input className='font-xs mr-1' type="number" />
@@ -17,8 +17,8 @@ const Pagination = ({ user, start, end, setStart, setEnd}) => {
         <button>3</button>
         <button>4</button>
         <button>+</button>
-      </div> */}
-      {start === 0  ? 
+      </div>
+      {/* {start === 0  ? 
         <button className="disable">prev</button> :
         <button onClick={() => {
           setStart(start -= 10)
@@ -40,7 +40,7 @@ const Pagination = ({ user, start, end, setStart, setEnd}) => {
           setStart(0)
           setEnd(user.length)
         }}>Show All</button>
-      }
+      } */}
     </div>
   )
 }

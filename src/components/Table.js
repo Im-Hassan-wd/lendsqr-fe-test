@@ -2,32 +2,32 @@ import { Link } from "react-router-dom";
 // static files
 import filter from "../icon/filter.svg"
 
-const Table = ({ user, end, start }) => {
+const Table = ({ user, end, start, setShowFilterContainer }) => {
   return (
     <div className="p-2 table bg-white">
       <table className="user-list">
       {user && <tr>
-        <th>
+        <th onClick={() => setShowFilterContainer(true)}>
           <div className="text-gray transform-uppercase font-xs display-i">Organization</div>
           <img src={filter} alt="filter" />
         </th>
-        <th className="">
+        <th onClick={() => setShowFilterContainer(true)}>
           <div className="text-gray transform-uppercase font-xs display-i">Username</div>
           <img src={filter} alt="filter" />
         </th>
-        <th className="">
+        <th onClick={() => setShowFilterContainer(true)}>
           <div className="text-gray transform-uppercase font-xs display-i">Email</div>
           <img src={filter} alt="filter" />
         </th>
-        <th className="">
+        <th onClick={() => setShowFilterContainer(true)}>
           <div className="text-gray transform-uppercase font-xs display-i">Phone Number</div>
           <img src={filter} alt="filter" />
         </th>
-        <th className="">
+        <th onClick={() => setShowFilterContainer(true)}>
           <div className="text-gray transform-uppercase font-xs display-i">Date Joined</div>
           <img src={filter} alt="filter" />
         </th>
-        <th className="">
+        <th onClick={() => setShowFilterContainer(true)}>
           <div className="text-gray transform-uppercase font-xs display-i">Status</div>
           <img src={filter} alt="filter" />
         </th>
