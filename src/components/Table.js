@@ -31,7 +31,7 @@ const Table = ({ user, end, start, setFilterContainer, filterContainer }) => {
   return (
     <div className="p-2 table bg-white">
       <table className="user-list">
-      {user && <tr>
+      {user && <tr className="">
         {tableHead.map(head => (
           <th>
             <div className="text-gray transform-uppercase font-xs display-i">{ head }</div>
