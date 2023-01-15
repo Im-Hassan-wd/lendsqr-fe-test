@@ -1,6 +1,7 @@
 import eye from "../icon/eye.svg"
 import auser from "../icon/buser.svg"
 import buser from "../icon/auser.svg"
+import { Link } from "react-router-dom";
 
 const DropDown = ({ top }) => {
     return (
@@ -11,7 +12,7 @@ const DropDown = ({ top }) => {
       }} className="drop-down bg-white p-2 br-sm">
         <div className="display-f">
           <img className="mr-1" src={eye} alt="view details" />
-          <p className="text-primary font-sm">View Details</p>
+          <p className="text-primary font-sm"><Link to={`user/${id}`}>View Details</Link> </p>
         </div>
         <div className="display-f">
           <img className="mr-1" src={auser} alt="blacklist user" />

@@ -41,12 +41,12 @@ const Table = ({ user, end, start, setShowFilterContainer }) => {
       </tr>}
 
         {user && user.map(u => (
-            <tr className="tr" key={u.id}>
+          <tr className="tr" key={u.id}>
             <td>
               <p className="text-primary org wrap font-xs">{u.orgName}</p>
             </td>
             <td>
-              <p className="text-primary name font-xs"><Link to={`/user/${u.id}`}>{u.profile.firstName} {u.profile.lastName}</Link></p>
+              <p className="text-primary name font-xs">{u.profile.firstName} {u.profile.lastName}</p>
             </td>
             <td>
               <p className="text-primary email font-xs">{u.email}</p>
@@ -58,18 +58,18 @@ const Table = ({ user, end, start, setShowFilterContainer }) => {
               <p className="text-primary date font-xs">{u.lastActiveDate.slice(0, 10)}</p>
             </td>
             <td className="row-flex">
-            {u.lastActiveDate.slice(0, 4) >= 2050 && <p className="text-active btn-p font-xs bg-active-light-9 p-1 br-full">Active</p> }
-            {u.lastActiveDate.slice(0, 4) >= 2030 && u.lastActiveDate.slice(0, 4) < 2050 && <p className="text-pending btn-p font-xs bg-pending-light-9 p-1 br-full">Pending</p> }
-            {u.lastActiveDate.slice(0, 4) > 2019 && u.lastActiveDate.slice(0, 4) < 2030 && <p className="text-gray btn-p font-xs bg-gray-light-9 p-1 br-full">Inactive</p> }
-            {u.lastActiveDate.slice(0, 4) <= 2019 && <p className="text-blacklist btn-p font-xs bg-blacklist-light-9 p-1 br-full">Blacklisted</p> }
-            {dropDown === true ? <button onClick={(e) => handleClick(e)}><img src={ellipse} alt="filter-icon" /></button> : null }
-            {dropDown === false ? <button onClick={(e) => handleClickAgain(e)}><img src={ellipse} alt="filter-icon" /></button> : null }
+              {u.lastActiveDate.slice(0, 4) >= 2050 && <p className="text-active btn-p font-xs bg-active-light-9 p-1 br-full">Active</p> }
+              {u.lastActiveDate.slice(0, 4) >= 2030 && u.lastActiveDate.slice(0, 4) < 2050 && <p className="text-pending btn-p font-xs bg-pending-light-9 p-1 br-full">Pending</p> }
+              {u.lastActiveDate.slice(0, 4) > 2019 && u.lastActiveDate.slice(0, 4) < 2030 && <p className="text-gray btn-p font-xs bg-gray-light-9 p-1 br-full">Inactive</p> }
+              {u.lastActiveDate.slice(0, 4) <= 2019 && <p className="text-blacklist btn-p font-xs bg-blacklist-light-9 p-1 br-full">Blacklisted</p> }
+              {dropDown === true ? <button onClick={(e) => handleClick(e)}><img src={ellipse} alt="filter-icon" /></button> : null }
+              {dropDown === false ? <button onClick={(e) => handleClickAgain(e)}><img src={ellipse} alt="filter-icon" /></button> : null }
               
             </td>
         </tr>
         )).slice(start, end)}
     </table>
-    {dropDown && <DropDown top={top} /> }
+    {dropDown && <DropDown user={user} top={top} /> }
     </div>
   );
 }
