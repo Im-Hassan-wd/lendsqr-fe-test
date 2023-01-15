@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 // static files
 import filter from "../icon/filter.svg"
+import ellipse from "../icon/ellipse.svg"
 
 const Table = ({ user, end, start, setShowFilterContainer }) => {
   return (
@@ -48,13 +49,14 @@ const Table = ({ user, end, start, setShowFilterContainer }) => {
               <p className="text-primary number font-xs">{u.phoneNumber.slice(0, 14)}</p>
             </td>
             <td>
-              <p className="text-primary date font-xs">{u.createdAt.slice(0, 10)}</p>
+              <p className="text-primary date font-xs">{u.lastActiveDate.slice(0, 10)}</p>
             </td>
-            <td>
-            {u.lastActiveDate.slice(0, 4) > 2050 && <p className="text-active btn-p font-xs bg-active-light-9 p-1 br-full">Active</p> }
-            {u.lastActiveDate.slice(0, 4) > 2030 && u.lastActiveDate.slice(0, 4) < 2050 && <p className="text-pending btn-p font-xs bg-pending-light-9 p-1 br-full">Pending</p> }
+            <td className="row-flex">
+            {u.lastActiveDate.slice(0, 4) >= 2050 && <p className="text-active btn-p font-xs bg-active-light-9 p-1 br-full">Active</p> }
+            {u.lastActiveDate.slice(0, 4) >= 2030 && u.lastActiveDate.slice(0, 4) < 2050 && <p className="text-pending btn-p font-xs bg-pending-light-9 p-1 br-full">Pending</p> }
             {u.lastActiveDate.slice(0, 4) > 2019 && u.lastActiveDate.slice(0, 4) < 2030 && <p className="text-gray btn-p font-xs bg-gray-light-9 p-1 br-full">Inactive</p> }
-            {u.lastActiveDate.slice(0, 4) < 2019 && <p className="text-blacklist btn-p font-xs bg-blacklist-light-9 p-1 br-full">Blacklisted</p> }
+            {u.lastActiveDate.slice(0, 4) <= 2019 && <p className="text-blacklist btn-p font-xs bg-blacklist-light-9 p-1 br-full">Blacklisted</p> }
+            <img src={ellipse} alt="filter-icon" />
               
             </td>
         </tr>
