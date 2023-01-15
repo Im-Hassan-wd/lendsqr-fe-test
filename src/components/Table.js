@@ -16,7 +16,6 @@ const Table = ({ user, end, start, setFilterContainer, filterContainer }) => {
   ]
   const [top, setTop] = useState(0)
   const [dropDown, setDropDown] = useState(false)
-  console.log(filterContainer)
 
   const handleClick = (e) => {
     setTop(e.pageY)

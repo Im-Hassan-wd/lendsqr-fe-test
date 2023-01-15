@@ -10,7 +10,7 @@ body {
   box-sizing: border-box;
   font-family: 'Work Sans', sans-serif;
   background: $light;
-  overflow-x: auto;
+  position: relative;
 }
   
 a {

@@ -7,8 +7,8 @@ const DropDown = ({ top }) => {
     return (
       <div style={{
         position: "absolute",
-        top: top + 20,
-        right: "10px"
+        top: top - 440,
+        right: "-10px"
       }} className="drop-down bg-white p-2 br-sm">
         <div className="display-f">
           <img className="mr-1" src={eye} alt="view details" />

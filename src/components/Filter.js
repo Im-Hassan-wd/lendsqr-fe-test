@@ -1,7 +1,7 @@
 // static files (images, styles)
 import "./Filter.scss"
 
-const Filter = ({setFilterContainer}) => {
+const Filter = () => {
   return (
     <div className="filter bg-white p-2 br-md">
       <form>
