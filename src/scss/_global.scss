@@ -12,6 +12,20 @@ body {
   background: $light;
   position: relative;
 }
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar-track {
+  background: #fff;
+  width: 5px;
+}
+::-webkit-scrollbar-thumb {
+  background: #b9b9b9;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #b9b9b9;
+}
   
 a {
   text-decoration: none;
