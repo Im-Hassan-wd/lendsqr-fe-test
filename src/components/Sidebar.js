@@ -2,7 +2,7 @@ import { Link } from "react-router-dom"
 // components
 import SideList from "./SideList"
 // static files
-import {briefcase, caretdown} from "../icon/briefcase.svg"
+import briefcase from "../icon/briefcase.svg"
 import caretdown from "../icon/caretdown.svg"
 import dec from "../icon/dec.svg"
 import services from "../icon/services.svg"
