@@ -6,8 +6,8 @@ export default function NotFound () {
   return (
     <div className="bg-white">
       <Helmet>
-        <title>404</title>
-        <meta name="description" content="Not found" />
+        <title>Lendsqr | 404</title>
+        <meta name="description" content="Page Not found" />
         <link rel="canonical" href="/*" />
       </Helmet>
       <div className="not-found">

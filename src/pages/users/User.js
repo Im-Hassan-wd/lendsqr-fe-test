@@ -16,7 +16,7 @@ const User = ({ user, isPending, error, setFilterContainer, filterContainer }) =
   return (
     <div className="user bg-light">
       <Helmet>
-        <title>User | Lendsqr</title>
+        <title>Lendsqr | User</title>
         <meta name="description" content="At Lendsqr, many of our lenders use web apps to reach over half a million customers" />
         <link rel="canonical" href="/user" />
       </Helmet>

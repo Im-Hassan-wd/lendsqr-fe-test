@@ -11,7 +11,7 @@ export default function Dashboard ({ user, isPending, error }) {
   return (
     <div className="dashboard bg-light">
       <Helmet>
-        <title>Dashboard | Lendsqr</title>
+        <title>Lendsqr | Dashboard</title>
         <meta name="description" content="At Lendsqr, many of our lenders use web apps to reach over half a million customers" />
         <link rel="canonical" href="/" />
       </Helmet>

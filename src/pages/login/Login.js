@@ -8,7 +8,7 @@ const Login = () => {
   return (
     <div className="login">
       <Helmet>
-        <title>Login | Lendsqr</title>
+        <title>Lendsqr | Login</title>
         <meta name="description" content="Login reach over half a million customers" />
         <link rel="canonical" href="/login" />
       </Helmet>
