@@ -16,16 +16,18 @@ const Table = ({ user, end, start, setFilterContainer, filterContainer }) => {
   ]
   const [top, setTop] = useState(0)
   const [dropDown, setDropDown] = useState(false)
+  const [id, setId] = useState(1)
 
   const handleClick = (e) => {
     setTop(e.pageY)
     setDropDown(false)
+    setId(e.target.parentElement.getAttribute("data-id"))
   }
-
+  
   const handleClickAgain = (e) => {
     setTop(e.pageY)
     setDropDown(true)
-
+    setId(e.target.parentElement.getAttribute("data-id"))
   } 
 
   return (
@@ -63,14 +65,14 @@ const Table = ({ user, end, start, setFilterContainer, filterContainer }) => {
               {u.lastActiveDate.slice(0, 4) >= 2030 && u.lastActiveDate.slice(0, 4) < 2050 && <p className="text-pending btn-p font-xs bg-pending-light-9 p-1 br-full">Pending</p> }
               {u.lastActiveDate.slice(0, 4) > 2019 && u.lastActiveDate.slice(0, 4) < 2030 && <p className="text-gray btn-p font-xs bg-gray-light-9 p-1 br-full">Inactive</p> }
               {u.lastActiveDate.slice(0, 4) <= 2019 && <p className="text-blacklist btn-p font-xs bg-blacklist-light-9 p-1 br-full">Blacklisted</p> }
-              {dropDown === true ? <button onClick={(e) => handleClick(e)}><img src={ellipse} alt="filter-icon" /></button> : null }
-              {dropDown === false ? <button onClick={(e) => handleClickAgain(e)}><img src={ellipse} alt="filter-icon" /></button> : null }
+              {dropDown === true ? <button data-id={u.id} onClick={(e) => handleClick(e)}><img src={ellipse} alt="filter-icon" /></button> : null }
+              {dropDown === false ? <button data-id={u.id} onClick={(e) => handleClickAgain(e)}><img src={ellipse} alt="filter-icon" /></button> : null }
               
             </td>
         </tr>
         )).slice(start, end)}
     </table>
-    {dropDown && <DropDown user={user} top={top} /> }
+    {dropDown && <DropDown user={user} top={top} id={id} /> }
     </div>
   );
 }
