@@ -2,7 +2,7 @@ import { Link } from "react-router-dom"
 // components
 import SideList from "./SideList"
 // static files
-import briefcase from "../icon/briefcase.svg"
+import {briefcase, caretdown} from "../icon/briefcase.svg"
 import caretdown from "../icon/caretdown.svg"
 import dec from "../icon/dec.svg"
 import services from "../icon/services.svg"
@@ -27,7 +27,7 @@ import login from "../icon/login.svg"
 
 const Sidebar = () => {
     return (
-      <div className="sidebar bg-white">
+      <sidebar className="sidebar bg-white">
         <h5 className="pl-2">
           <a className="display-f align-center">
             <img className="mr-1" src={briefcase} alt="briefcase icon" />
@@ -74,7 +74,7 @@ const Sidebar = () => {
           <SideList img={login} text="Login" link={"#"} />
           <li className="ml-1 font-xs text-primary">V 1.2.0</li>
         </ul>
-      </div>
+      </sidebar>
     );
 }
  
