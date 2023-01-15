@@ -5,7 +5,7 @@ import filter from "../icon/filter.svg"
 import ellipse from "../icon/ellipse.svg"
 import DropDown from "./DropDown";
 
-const Table = ({ user, end, start, setShowFilterContainer }) => {
+const Table = ({ user, end, start, setFilterContainer, filterContainer }) => {
   const tableHead = [
     'ORGANIZATION',
     'USERNAME',
@@ -16,6 +16,7 @@ const Table = ({ user, end, start, setShowFilterContainer }) => {
   ]
   const [top, setTop] = useState(0)
   const [dropDown, setDropDown] = useState(false)
+  console.log(filterContainer)
 
   const handleClick = (e) => {
     setTop(e.pageY)
@@ -33,10 +34,11 @@ const Table = ({ user, end, start, setShowFilterContainer }) => {
       <table className="user-list">
       {user && <tr>
         {tableHead.map(head => (
-          <th onClick={() => setShowFilterContainer(true)}>
+          <th>
             <div className="text-gray transform-uppercase font-xs display-i">{ head }</div>
-          <img src={filter} alt="filter" />
-        </th>
+            {filterContainer === false ? <img onClick={() => setFilterContainer(true)} src={filter} alt="filter" /> : null }
+            {filterContainer === true ? <img onClick={() => setFilterContainer(false)} src={filter} alt="filter" /> : null }
+          </th>
         ))}
       </tr>}
 

@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Routes, Route, Navigate } from "react-router-dom"
 // hooks
 import useFetch from "./Hooks/useFetch";
@@ -10,7 +11,8 @@ import NotFound from "./pages/404/NotFound";
 
 function App() {
   const { data: user, isPending, error} = useFetch("https://6270020422c706a0ae70b72c.mockapi.io/lendsqr/api/v1/users")
-  
+  const [filterContainer, setFilterContainer] = useState(false);
+
   return (
     <div className="App">
       <Routes>
@@ -19,7 +21,13 @@ function App() {
         <Route path="/" element={<Navigate to="/dashboard" />} />
         <Route path="dashboard" element={<Dashboard user={user} isPending={isPending} error={error} />} />
         <Route path="login" element={<Login />} />
-        <Route path="user" element={<User user={user} isPending={isPending} error={error}/>} />
+        <Route path="user" element={<User 
+        setFilterContainer={setFilterContainer}
+        filterContainer={filterContainer}
+        user={user} 
+        isPending={isPending} 
+        error={error}/>} 
+        />
         <Route path='/user/:id' element={<UserDetails />} />
         <Route path='*' element={<NotFound />} />
       </Routes>
