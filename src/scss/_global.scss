@@ -51,6 +51,7 @@ table {
 }
 
 .table {
+  // position: relative;
   overflow-x: scroll;
   box-shadow: $box-shadow-lg;
   padding: $base-padding * 2 $base-padding * 3;
@@ -123,6 +124,7 @@ table {
 
 .drop-down {
   width: 150px;
+  box-shadow: $box-shadow-lg;
 }
 
 @keyframes rotate {

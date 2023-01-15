@@ -8,11 +8,18 @@ import DropDown from "./DropDown";
 const Table = ({ user, end, start, setShowFilterContainer }) => {
   const [top, setTop] = useState(0)
   const [left, setLeft] = useState(0)
+  const [dropDown, setDropDown] = useState(false)
 
   const handleClick = (e) => {
-    setTop(e.pageX)
-    setLeft(e.pageY)
+    setTop(e.pageY)
+    setDropDown(false)
   }
+
+  const handleClickAgain = (e) => {
+    setTop(e.pageY)
+    setDropDown(true)
+
+  } 
 
   return (
     <div className="p-2 table bg-white">
@@ -66,13 +73,14 @@ const Table = ({ user, end, start, setShowFilterContainer }) => {
             {u.lastActiveDate.slice(0, 4) >= 2030 && u.lastActiveDate.slice(0, 4) < 2050 && <p className="text-pending btn-p font-xs bg-pending-light-9 p-1 br-full">Pending</p> }
             {u.lastActiveDate.slice(0, 4) > 2019 && u.lastActiveDate.slice(0, 4) < 2030 && <p className="text-gray btn-p font-xs bg-gray-light-9 p-1 br-full">Inactive</p> }
             {u.lastActiveDate.slice(0, 4) <= 2019 && <p className="text-blacklist btn-p font-xs bg-blacklist-light-9 p-1 br-full">Blacklisted</p> }
-            <img onClick={(e) => handleClick(e)} src={ellipse} alt="filter-icon" />
+            {dropDown === true ? <img onClick={(e) => handleClick(e)} src={ellipse} alt="filter-icon" /> : null }
+            {dropDown === false ? <img onClick={(e) => handleClickAgain(e)} src={ellipse} alt="filter-icon" /> : null }
               
             </td>
         </tr>
         )).slice(start, end)}
     </table>
-    <DropDown top={top} />
+    {dropDown && <DropDown top={top} /> }
     </div>
   );
 }

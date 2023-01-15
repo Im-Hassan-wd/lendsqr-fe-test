@@ -2,9 +2,13 @@ import eye from "../icon/eye.svg"
 import auser from "../icon/buser.svg"
 import buser from "../icon/auser.svg"
 
-const DropDown = () => {
+const DropDown = ({ top }) => {
     return (
-      <div className="drop-down bg-white p-2 br-sm">
+      <div style={{
+        position: "absolute",
+        top: top + 20,
+        right: "0px"
+      }} className="drop-down bg-white p-2 br-sm">
         <div className="display-f">
           <img className="mr-1" src={eye} alt="view details" />
           <p className="text-primary font-sm">View Details</p>
