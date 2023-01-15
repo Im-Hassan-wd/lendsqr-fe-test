@@ -6,8 +6,15 @@ import ellipse from "../icon/ellipse.svg"
 import DropDown from "./DropDown";
 
 const Table = ({ user, end, start, setShowFilterContainer }) => {
+  const tableHead = [
+    'ORGANIZATION',
+    'USERNAME',
+    'EMAIL',
+    'PNONE NUMBER',
+    'DATE JOINED',
+    'STATUS'
+  ]
   const [top, setTop] = useState(0)
-  const [left, setLeft] = useState(0)
   const [dropDown, setDropDown] = useState(false)
 
   const handleClick = (e) => {
@@ -25,30 +32,12 @@ const Table = ({ user, end, start, setShowFilterContainer }) => {
     <div className="p-2 table bg-white">
       <table className="user-list">
       {user && <tr>
-        <th onClick={() => setShowFilterContainer(true)}>
-          <div className="text-gray transform-uppercase font-xs display-i">Organization</div>
+        {tableHead.map(head => (
+          <th onClick={() => setShowFilterContainer(true)}>
+            <div className="text-gray transform-uppercase font-xs display-i">{ head }</div>
           <img src={filter} alt="filter" />
         </th>
-        <th onClick={() => setShowFilterContainer(true)}>
-          <div className="text-gray transform-uppercase font-xs display-i">Username</div>
-          <img src={filter} alt="filter" />
-        </th>
-        <th onClick={() => setShowFilterContainer(true)}>
-          <div className="text-gray transform-uppercase font-xs display-i">Email</div>
-          <img src={filter} alt="filter" />
-        </th>
-        <th onClick={() => setShowFilterContainer(true)}>
-          <div className="text-gray transform-uppercase font-xs display-i">Phone Number</div>
-          <img src={filter} alt="filter" />
-        </th>
-        <th onClick={() => setShowFilterContainer(true)}>
-          <div className="text-gray transform-uppercase font-xs display-i">Date Joined</div>
-          <img src={filter} alt="filter" />
-        </th>
-        <th onClick={() => setShowFilterContainer(true)}>
-          <div className="text-gray transform-uppercase font-xs display-i">Status</div>
-          <img src={filter} alt="filter" />
-        </th>
+        ))}
       </tr>}
 
         {user && user.map(u => (
@@ -73,8 +62,8 @@ const Table = ({ user, end, start, setShowFilterContainer }) => {
             {u.lastActiveDate.slice(0, 4) >= 2030 && u.lastActiveDate.slice(0, 4) < 2050 && <p className="text-pending btn-p font-xs bg-pending-light-9 p-1 br-full">Pending</p> }
             {u.lastActiveDate.slice(0, 4) > 2019 && u.lastActiveDate.slice(0, 4) < 2030 && <p className="text-gray btn-p font-xs bg-gray-light-9 p-1 br-full">Inactive</p> }
             {u.lastActiveDate.slice(0, 4) <= 2019 && <p className="text-blacklist btn-p font-xs bg-blacklist-light-9 p-1 br-full">Blacklisted</p> }
-            {dropDown === true ? <img onClick={(e) => handleClick(e)} src={ellipse} alt="filter-icon" /> : null }
-            {dropDown === false ? <img onClick={(e) => handleClickAgain(e)} src={ellipse} alt="filter-icon" /> : null }
+            {dropDown === true ? <button onClick={(e) => handleClick(e)}><img src={ellipse} alt="filter-icon" /></button> : null }
+            {dropDown === false ? <button onClick={(e) => handleClickAgain(e)}><img src={ellipse} alt="filter-icon" /></button> : null }
               
             </td>
         </tr>
