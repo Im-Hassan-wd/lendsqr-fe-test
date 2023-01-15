@@ -10,7 +10,7 @@ import NotFound from "./pages/404/NotFound";
 
 function App() {
   const { data: user, isPending, error} = useFetch("https://6270020422c706a0ae70b72c.mockapi.io/lendsqr/api/v1/users")
-
+  
   return (
     <div className="App">
       <Routes>

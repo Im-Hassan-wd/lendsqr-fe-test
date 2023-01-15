@@ -9,8 +9,6 @@ import Sidebar from "../../components/Sidebar";
 import Table from "../../components/Table";
 import Pagination from "../../components/Pagination";
 import Filter from "../../components/Filter";
-import DropDown from "../../components/DropDown";
-
 const User = ({ user, isPending, error }) => {
   const [start, setStart] = useState(0)
   const [end, setEnd] = useState(10)
@@ -35,7 +33,6 @@ const User = ({ user, isPending, error }) => {
               {user && <Filter /> }
             </div>
             {user && <Pagination user={user} start={start} setStart={setStart} end={end} setEnd={setEnd}/>}
-            <DropDown />
           </div>
         </div>
       </div>

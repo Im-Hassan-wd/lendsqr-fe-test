@@ -121,6 +121,10 @@ table {
   animation: rotate 2s ease-in-out infinite;
 }
 
+.drop-down {
+  width: 150px;
+}
+
 @keyframes rotate {
   from {
     transform: rotate(0deg);

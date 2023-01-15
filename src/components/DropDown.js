@@ -4,13 +4,19 @@ import buser from "../icon/auser.svg"
 
 const DropDown = () => {
     return (
-      <div className="drop-down p-3 br-sm">
-        <div className="display-f mb-1">
+      <div className="drop-down bg-white p-2 br-sm">
+        <div className="display-f">
           <img className="mr-1" src={eye} alt="view details" />
           <p className="text-primary font-sm">View Details</p>
         </div>
-        <div className=""></div>
-        <div className=""></div>
+        <div className="display-f">
+          <img className="mr-1" src={auser} alt="blacklist user" />
+          <p className="text-primary font-sm">Blacklist User</p>
+        </div>
+        <div className="display-f">
+          <img className="mr-1" src={buser} alt="activate details" />
+          <p className="text-primary font-sm">Activate User</p>
+        </div>
       </div>
     );
 }
