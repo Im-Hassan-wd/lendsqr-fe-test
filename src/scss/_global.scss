@@ -58,14 +58,14 @@ li {
 
 @media (max-width: 800px) {
   .sidebar {
-    width: 45px;
-    min-width: 45px;
+    width: 10px;
+    min-width: 10px;
     overflow: hidden;
+    position: absolute;
+    top: 85px;
+    left: 0;
   }
   .sidebar:hover {
-    position: absolute;
-    top: 65px;
-    left: 0;
     width: 250px;
     min-width: 250px;
     height: 145vh;
