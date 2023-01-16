@@ -26,7 +26,11 @@ const User = ({ user, isPending, error, setFilterContainer, filterContainer }) =
         <div className="container user-wrap">
           <h1 className="font-lg mt-2 mb-2 text-primary">Users</h1>
           <Card />
-          {error && <div className="error mt-2 text-primary font-lg bg-white p-2">{error}, but don't fret-<p className="text-white bg-primary p-1 br-md display-i-b mt-1" onClick={() => window.location.reload()}> let's give it another shot</p></div>}
+          {error && 
+            <div className="error mt-2 text-primary font-lg bg-white p-2">{error}, but don't fret- let's give it another shot
+              <button className="btn-blue text-white font-sm mt-1" onClick={() => window.location.reload()}>Refresh</button>
+            </div>
+          }
           {isPending && <div className="loading"><img src={loading} alt="loading" /></div>}
           <div className={filterContainer === true ? "wrapper" : ""}>
             {user && <Table 

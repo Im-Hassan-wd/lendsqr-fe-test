@@ -41,7 +41,11 @@ const UserDetails = () => {
           </div >
           <h1 className="font-lg mt-1 mb-2 text-primary">User details</h1>
           {isPending && <div className="loading"><img src={loading} alt="loading" /></div>}
-          {error && <div className="error mt-2 text-primary font-lg bg-white p-2">{error}, but don't fret-<p className="text-white bg-primary p-1 br-md display-i-b mt-1" onClick={() => window.location.reload()}> let's give it another shot</p></div>}
+          {error && 
+            <div className="error mt-2 text-primary font-lg bg-white p-2">{error}, but don't fret- let's give it another shot
+              <button className="btn-blue text-white font-sm mt-1" onClick={() => window.location.reload()}>Refresh</button>
+            </div>
+          }
           {user && (
             <div>
             <div className="bg-white p-2 pb-0 mt-2">
