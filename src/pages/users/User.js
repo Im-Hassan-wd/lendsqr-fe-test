@@ -23,12 +23,12 @@ const User = ({ user, isPending, error, setFilterContainer, filterContainer }) =
       <Navbar />
       <div className="display-f">
         <Sidebar />
-        <div className="container">
+        <div className="container user-wrap">
           <h1 className="font-lg mt-2 mb-2 text-primary">Users</h1>
           <Card />
           {error && <div className="error mt-2 text-primary font-lg bg-white p-2">{error}, but don't fret-<p className="text-white bg-primary p-1 br-md display-i-b mt-1" onClick={() => window.location.reload()}> let's give it another shot</p></div>}
           {isPending && <div className="loading"><img src={loading} alt="loading" /></div>}
-          <div className="wrapper">
+          <div className={filterContainer === true ? "wrapper" : ""}>
             {user && <Table 
               user={user.slice(start, end)} 
               setFilterContainer={setFilterContainer} 

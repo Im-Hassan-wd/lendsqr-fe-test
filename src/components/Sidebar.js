@@ -43,7 +43,7 @@ const Sidebar = () => {
       </h5>
       <p className="font-sm text-gray mt-2 pl-2">Customers</p>
       <ul className="mb-2">
-        <SideList img={users} text="Users" link={"user"} />
+        <SideList img={users} text="Users" link={"/user"} />
         <SideList img={gua} text="Guarantors" link={"#"} />
         <SideList img={loan} text="Loans" link={"#"} />
         <SideList img={dec} text="Decision Models" link={"#"} />
