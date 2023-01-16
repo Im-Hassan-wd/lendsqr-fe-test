@@ -71,8 +71,8 @@ const Sidebar = () => {
         <SideList img={clipboard} text="Savings Products" link={"#"} />
       </ul>
       <ul className="mt-4">
-        <SideList img={login} text="Login" link={"#"} />
-        <li className="ml-1 font-xs text-primary">V 1.2.0</li>
+        <SideList img={login} text="Login" link={"/login"} />
+        <li className="ml-1 mb-1 font-xs text-primary">V 1.2.0</li>
       </ul>
     </sidebar>
   );
