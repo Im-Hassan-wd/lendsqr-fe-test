@@ -1,11 +1,11 @@
 <!-- Please update value in the {}  -->
 
-<h1 align="center">Lengsqr-test</h1>
+<h1 align="center" target="_blank">Lengsqr-test</h1>
 
 <div align="center">
   <h3>
     <span> | </span>
-    <a href="https://lendsqr-wick-test.netlify.app/">
+    <a href="https://lensqr-wick-test.netlify.app/">
       Solution
     </a>
     <span> | </span>
