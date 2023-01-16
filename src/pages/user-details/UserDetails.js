@@ -21,7 +21,7 @@ const UserDetails = () => {
   return (
     <div className="user-details">
     <Helmet>
-      <title>Lendsqr | User detail</title>
+      <title>Lendsqr | User details</title>
       <meta name="description" content="At Lendsqr, many of our lenders use web apps to reach over half a million customers" />
       <link rel="canonical" href={`/user/${id}`} />
     </Helmet>

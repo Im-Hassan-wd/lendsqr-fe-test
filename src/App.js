@@ -30,7 +30,7 @@ function App() {
         />
         <Route path='/user/:id' element={<UserDetails />} />
         <Route path='*' element={<NotFound />} />
-        <Route path='/*/' element={<NotFound />} />
+        <Route path='/*' element={<NotFound />} />
       </Routes>
     </div>
   );

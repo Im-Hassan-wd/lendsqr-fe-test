@@ -14,11 +14,11 @@ body {
 }
 
 ::-webkit-scrollbar {
-  width: 5px;
+  width: 15px;
 }
 ::-webkit-scrollbar-track {
   background: #fff;
-  width: 5px;
+  width: 15px;
 }
 ::-webkit-scrollbar-thumb {
   background: #b9b9b9;
@@ -61,6 +61,15 @@ li {
     width: 45px;
     min-width: 45px;
     overflow: hidden;
+  }
+  .sidebar:hover {
+    position: absolute;
+    top: 65px;
+    left: 0;
+    width: 250px;
+    min-width: 250px;
+    height: 145vh;
+    overflow-y: scroll;
   }
 }
 
