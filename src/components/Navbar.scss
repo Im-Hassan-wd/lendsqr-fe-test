@@ -49,6 +49,12 @@
       margin-left: $base-margin;
     }
   }
+  @media (max-width: 480px) {
+    input, .input-btn {
+      display: none;
+    }
+
+  }
 }
 
 button.border-half-radius {

@@ -17,7 +17,7 @@ const Navbar = () => {
           <Link to="/" className='site-title logo'><img src={logo} alt="site logo" /></Link>
           <div className="display-f align-center">
             <input type="text" placeholder="search for anything" className="form-input form-input-half m-0 ml-4 text-primary p-1"/>
-            <button className='btn-blue border-half-radius text-white p-2'><img src={search} alt="search icon" /></button>
+            <button className='btn-blue border-half-radius text-white p-2 input-btn'><img src={search} alt="search icon" /></button>
           </div>
         </div>
         <ul className="display-f align-center">
